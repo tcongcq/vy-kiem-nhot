@@ -67,7 +67,7 @@
                                     <div class="wpb_wrapper">
                                         <div class="wpb_raw_code wpb_content_element wpb_raw_html">
                                             <div class="wpb_wrapper">
-                                                <a href="https://www.iol.lk/product-category/diesel-engine-oil/" class="pcat">
+                                                <a href="/product-category/diesel-engine-oil/" class="pcat">
                                                     <img width="370" height="380" src="https://iol.lk/wp-content/uploads/2018/08/diesel.jpg">
                                                     <span class="title">
                                                         <h3> Diesel Engine Oil <span class="go-top-icon">

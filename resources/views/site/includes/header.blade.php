@@ -44,15 +44,15 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-741 active">
+                    <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-741 {{ uri() == '' ? 'active' : ''}}">
                         <a title="Home" href="{{ url('/')  }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Home <span class="decor"></span>
                         </a>
                     </li>
-                    <li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742">
+                    <li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742 {{ uri() == 'about-us' ? 'active' : ''}}">
                         <a title="About Us" href="{{ url('about-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">About Us <span class="decor"></span>
                         </a>
                     </li>
-                    <li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-930 dropdown">
+                    <li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-930 dropdown {{ (uri() == 'products' || uri() == 'product-category') ? 'active' : ''}}">
                         <a title="Products" href="{{ url('products') }}" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Products <span class="decor"></span>
                         </a>
                         <ul role="menu" class="dropdown-menu ">
@@ -99,11 +99,11 @@
                         </ul>
                         <div class="dropdown-btn"></div>
                     </li>
-                    <li id="menu-item-954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-954">
+                    <li id="menu-item-954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-954 {{ uri() == 'news' ? 'active' : ''}}">
                         <a title="News" href="{{ url('news') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">News <span class="decor"></span>
                         </a>
                     </li>
-                    <li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-939">
+                    <li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-939 {{ uri() == 'contact-us' ? 'active' : ''}}">
                         <a title="Contact" href="{{ url('contact-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Contact <span class="decor"></span>
                         </a>
                     </li>

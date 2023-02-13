@@ -1,0 +1,13 @@
+{
+    "name": "innosoft/filemanager",
+    "description": "FileManager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "InnoSoft",
+            "email": "innosoftcantho@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

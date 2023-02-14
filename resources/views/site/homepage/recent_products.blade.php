@@ -27,12 +27,12 @@
                             <div class="single-shop-item">
                                 <div class="img-box">
                                     <img width="300" height="300" src="/wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-300x300.jpg 300w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-150x150.jpg 150w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-768x768.jpg 768w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-1024x1024.jpg 1024w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-70x70.jpg 70w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-270x270.jpg 270w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-55x55.jpg 55w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-83x83.jpg 83w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-600x600.jpg 600w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h-100x100.jpg 100w, /wp-content/uploads/2018/08/sinopec-automatic-transmission-fluid-111-h.jpg 1500w" sizes="(max-width: 300px) 100vw, 300px">
-                                    <a href="/product/sinopec-automatic-transmission-fluid-iii-h/" class="pr-more-btn">View More</a>
+                                    <a href="/products/sinopec-automatic-transmission-fluid-iii-h/" class="pr-more-btn">View More</a>
                                 </div>
                                 <div class="content-box">
                                     <div class="top-box clearfix">
                                         <div class="title-box pull-left">
-                                            <a href="/product/sinopec-automatic-transmission-fluid-iii-h/">
+                                            <a href="/products/sinopec-automatic-transmission-fluid-iii-h/">
                                                 <h3>Sinopec Automatic Transmission Fluid III-H</h3>
                                             </a>
                                             <ul class="price list-inline">
@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="review-box pull-right"></div>
                                     </div>
-                                    <a href="/product/sinopec-automatic-transmission-fluid-iii-h/" class="aut-cr-btn">add to cart</a>
+                                    <a href="/products/sinopec-automatic-transmission-fluid-iii-h/" class="aut-cr-btn">add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -49,12 +49,12 @@
                             <div class="single-shop-item">
                                 <div class="img-box">
                                     <img width="300" height="300" src="/wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-300x300.jpg 300w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-150x150.jpg 150w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-70x70.jpg 70w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-270x270.jpg 270w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-55x55.jpg 55w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-83x83.jpg 83w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-600x600.jpg 600w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums-100x100.jpg 100w, /wp-content/uploads/2018/08/sinopec-tulux-t-600-cj-4-15w-40-diesel-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums.jpg 700w" sizes="(max-width: 300px) 100vw, 300px">
-                                    <a href="/product/sinopec-tulux-t-600-15w-40-diesel-engine-oil/" class="pr-more-btn">View More</a>
+                                    <a href="/products/sinopec-tulux-t-600-15w-40-diesel-engine-oil/" class="pr-more-btn">View More</a>
                                 </div>
                                 <div class="content-box">
                                     <div class="top-box clearfix">
                                         <div class="title-box pull-left">
-                                            <a href="/product/sinopec-tulux-t-600-15w-40-diesel-engine-oil/">
+                                            <a href="/products/sinopec-tulux-t-600-15w-40-diesel-engine-oil/">
                                                 <h3>Sinopec Tulux T 600 15W-40 Diesel Engine Oil</h3>
                                             </a>
                                             <ul class="price list-inline">
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="review-box pull-right"></div>
                                     </div>
-                                    <a href="/product/sinopec-tulux-t-600-15w-40-diesel-engine-oil/" class="aut-cr-btn">add to cart</a>
+                                    <a href="/products/sinopec-tulux-t-600-15w-40-diesel-engine-oil/" class="aut-cr-btn">add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -71,12 +71,12 @@
                             <div class="single-shop-item">
                                 <div class="img-box">
                                     <img width="300" height="300" src="/wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-300x300.jpg 300w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-150x150.jpg 150w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-70x70.jpg 70w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-270x270.jpg 270w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-55x55.jpg 55w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-83x83.jpg 83w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-600x600.jpg 600w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums-100x100.jpg 100w, /wp-content/uploads/2018/08/sinopec-tulux-cfsf-sae-30-diesel-engine-oil-is-available-in-200-ltr-drums.jpg 700w" sizes="(max-width: 300px) 100vw, 300px">
-                                    <a href="/product/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/" class="pr-more-btn">View More</a>
+                                    <a href="/products/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/" class="pr-more-btn">View More</a>
                                 </div>
                                 <div class="content-box">
                                     <div class="top-box clearfix">
                                         <div class="title-box pull-left">
-                                            <a href="/product/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/">
+                                            <a href="/products/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/">
                                                 <h3>Sinopec Tulux CF/SF SAE 30 Engine Oil</h3>
                                             </a>
                                             <ul class="price list-inline">
@@ -85,7 +85,7 @@
                                         </div>
                                         <div class="review-box pull-right"></div>
                                     </div>
-                                    <a href="/product/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/" class="aut-cr-btn">add to cart</a>
+                                    <a href="/products/sinopec-tulux-cf-sf-sae-30-engine-oil-is-available-in-5-ltr-cans-in-200-ltr-drums/" class="aut-cr-btn">add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +93,12 @@
                             <div class="single-shop-item">
                                 <div class="img-box">
                                     <img width="300" height="300" src="/wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-300x300.jpg 300w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-150x150.jpg 150w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-768x768.jpg 768w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-1024x1024.jpg 1024w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-70x70.jpg 70w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-270x270.jpg 270w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-55x55.jpg 55w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-83x83.jpg 83w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-600x600.jpg 600w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40-100x100.jpg 100w, /wp-content/uploads/2018/08/sinopec-tulux-t-500-15w-40.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px">
-                                    <a href="/product/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/" class="pr-more-btn">View More</a>
+                                    <a href="/products/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/" class="pr-more-btn">View More</a>
                                 </div>
                                 <div class="content-box">
                                     <div class="top-box clearfix">
                                         <div class="title-box pull-left">
-                                            <a href="/product/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/">
+                                            <a href="/products/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/">
                                                 <h3>Sinopec Tulux T 500 15W-40 &amp; 20W-50 Classic Diesel Engine Oil</h3>
                                             </a>
                                             <ul class="price list-inline">
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="review-box pull-right"></div>
                                     </div>
-                                    <a href="/product/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/" class="aut-cr-btn">add to cart</a>
+                                    <a href="/products/sinopec-tulux-t-500-15w-40-20w-50-classic-diesel-engine-oil/" class="aut-cr-btn">add to cart</a>
                                 </div>
                             </div>
                         </div>

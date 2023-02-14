@@ -16,7 +16,7 @@
                                         <div class="overlay">
                                             <div class="image-view">
                                                 <div class="icon-holder">
-                                                    <a href="/secret-santa/">
+                                                    <a href="/news/secret-santa/">
                                                         <span class="flaticon-cross"></span>
                                                     </a>
                                                 </div>
@@ -28,7 +28,7 @@
                                             <a href="/author/iranga/">Iranga Panditharatne</a>
                                         </li>
                                         <li>
-                                            <a href="/secret-santa/#comments">
+                                            <a href="/news/secret-santa/#comments">
                                                 <span class="flaticon-speech-bubbles-comment-option"></span>0 comment </a>
                                         </li>
                                     </ul>
@@ -41,7 +41,7 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <a href="/secret-santa/">
+                                            <a href="/news/secret-santa/">
                                                 <h3>Secret Santa</h3>
                                             </a>
                                             <p></p>
@@ -58,7 +58,7 @@
                                         <div class="overlay">
                                             <div class="image-view">
                                                 <div class="icon-holder">
-                                                    <a href="/2022-new-year/">
+                                                    <a href="/news/2022-new-year/">
                                                         <span class="flaticon-cross"></span>
                                                     </a>
                                                 </div>
@@ -70,7 +70,7 @@
                                             <a href="/author/iranga/">Iranga Panditharatne</a>
                                         </li>
                                         <li>
-                                            <a href="/2022-new-year/#comments">
+                                            <a href="/news/2022-new-year/#comments">
                                                 <span class="flaticon-speech-bubbles-comment-option"></span>0 comment </a>
                                         </li>
                                     </ul>
@@ -83,11 +83,11 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <a href="/2022-new-year/">
+                                            <a href="/news/2022-new-year/">
                                                 <h3>2022 New Year</h3>
                                             </a>
                                             <p></p>
-                                            <a class="readmore" href="/2022-new-year/">Read More <i aria-hidden="true" class="fa fa-caret-right"></i>
+                                            <a class="readmore" href="/news/2022-new-year/">Read More <i aria-hidden="true" class="fa fa-caret-right"></i>
                                             </a>
                                         </div>
                                     </div>

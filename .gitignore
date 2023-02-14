@@ -1,6 +1,9 @@
 **/.DS_Store
 *.DS_Store
 public/.DS_Store
+public/theme/.DS_Store
+public/theme/img/.DS_Store
+
 
 node_modules/
 npm-debug.log

@@ -5,7 +5,7 @@
 <div class="page-wrapper">
     @include('site.includes.header')
     
-    <section class="breadcrumb-area" style="background-image:url('https://www.iol.lk/wp-content/uploads/2018/08/contact-us-banner.jpg');">
+    <section class="breadcrumb-area" style="background-image:url('/wp-content/uploads/2018/08/contact-us-banner.jpg');">
     	<div class="container">
     		<div class="row">
     			<div class="col-md-12">
@@ -306,7 +306,7 @@
 	                                <h2>Our Sales Team</h2>
 	                            </div>
 	                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-	                                <a class="aut-cr-btn" href="https://www.iol.lk/contact/our-sales-team/">VIEW</a>
+	                                <a class="aut-cr-btn" href="/contact/our-sales-team/">VIEW</a>
 	                            </div>
 	                        </div>
 	                    </div>

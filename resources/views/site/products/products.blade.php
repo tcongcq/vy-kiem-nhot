@@ -4,7 +4,7 @@
 @include('site.products.products-css')
 <div class="page-wrapper">
     @include('site.includes.header')
-    <section class="breadcrumb-area" style="background-image:url('https://www.iol.lk/wp-content/uploads/2018/08/prodct-banner-img.jpg');">
+    <section class="breadcrumb-area" style="background-image:url('/wp-content/uploads/2018/08/prodct-banner-img.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -203,7 +203,7 @@
                                     <div class="wpb_wrapper">
                                         <div class="wpb_raw_code wpb_content_element wpb_raw_html">
                                             <div class="wpb_wrapper">
-                                                <a href="https://www.iol.lk/product-category/passenger-car-motor-oils/" class="pcat">
+                                                <a href="/product-category/passenger-car-motor-oils/" class="pcat">
                                                     <img width="370" height="380" src="https://iol.lk/wp-content/uploads/2018/08/passenger-vehicle.jpg">
                                                     <span class="title">
                                                         <h3> Passenger Car Moto Oils <span class="go-top-icon">
@@ -249,8 +249,8 @@
                                     <div class="wpb_wrapper">
                                         <div class="wpb_raw_code wpb_content_element wpb_raw_html">
                                             <div class="wpb_wrapper">
-                                                <a href="https://www.iol.lk/product-category/tractor-oils/" class="pcat">
-                                                    <img width="370" height="380" src="https://www.iol.lk/wp-content/uploads/2022/10/R-6-copy.jpg">
+                                                <a href="/product-category/tractor-oils/" class="pcat">
+                                                    <img width="370" height="380" src="/wp-content/uploads/2022/10/R-6-copy.jpg">
                                                     <span class="title">
                                                         <h3> Tractor Oils <span class="go-top-icon">
                                                                 <span class="flaticon-right-arrow"></span>

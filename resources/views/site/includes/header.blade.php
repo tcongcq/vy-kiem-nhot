@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="https://www.iol.lk/wp-content/uploads/2018/08/sinopec-logo.png" alt="" title="Awesome Logo">
+                    <img src="/wp-content/uploads/2018/08/sinopec-logo.png" alt="" title="Awesome Logo">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

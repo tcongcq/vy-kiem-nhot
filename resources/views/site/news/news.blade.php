@@ -4,7 +4,7 @@
 @include('site.news.news_css')
 <div class="page-wrapper">
     @include('site.includes.header')
-    <section class="breadcrumb-area" style="background-image:url('https://www.iol.lk/wp-content/uploads/2018/09/news-bg.jpg');">
+    <section class="breadcrumb-area" style="background-image:url('/wp-content/uploads/2018/09/news-bg.jpg');">
     	<div class="container">
 	    	<div class="row">
 		    	<div class="col-md-12">
@@ -37,7 +37,7 @@
 	                            <div class="vc_column-inner">
 	                                <div class="wpb_wrapper">
 	                                    <div class="vc_grid-container-wrapper vc_clearfix vc_grid-animation-fadeIn">
-	                                        <div class="vc_grid-container vc_clearfix wpb_content_element vc_masonry_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:396,&quot;style&quot;:&quot;all-masonry&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1536665706398-5a409532-f6ed-10&quot;,&quot;tag&quot;:&quot;vc_masonry_grid&quot;}" data-vc-request="https://www.iol.lk/wp-admin/admin-ajax.php" data-vc-post-id="396" data-vc-public-nonce="c10c31a02e">
+	                                        <div class="vc_grid-container vc_clearfix wpb_content_element vc_masonry_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:396,&quot;style&quot;:&quot;all-masonry&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1536665706398-5a409532-f6ed-10&quot;,&quot;tag&quot;:&quot;vc_masonry_grid&quot;}" data-vc-request="/wp-admin/admin-ajax.php" data-vc-post-id="396" data-vc-public-nonce="c10c31a02e">
 	                                            <style data-type="vc_shortcodes-custom-css">
 	                                                .vc_custom_1419328663991 {
 	                                                    background-color: #f4f4f4 !important;
@@ -87,9 +87,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 0px; top: 0px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-11-at-17.52.56-768x1024.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-11-at-17.52.56-768x1024.jpeg') !important;">
 	                                                                    <a href="/news/secret-santa/" title="Secret Santa" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-11-at-17.52.56-768x1024.jpeg" class="vc_gitem-zone-img" alt="Secret Santa">
+	                                                                    <img src="/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-11-at-17.52.56-768x1024.jpeg" class="vc_gitem-zone-img" alt="Secret Santa">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -116,9 +116,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 400px; top: 0px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2022/01/newYear-1024x1024.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2022/01/newYear-1024x1024.jpg') !important;">
 	                                                                    <a href="/news/2022-new-year/" title="2022 New Year" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2022/01/newYear-1024x1024.jpg" class="vc_gitem-zone-img" alt="2022 New Year">
+	                                                                    <img src="/wp-content/uploads/2022/01/newYear-1024x1024.jpg" class="vc_gitem-zone-img" alt="2022 New Year">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -145,9 +145,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_grid-term-218 vc_visible-item" style="position: absolute; left: 800px; top: 0px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix ">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-16-at-8.15.04-PM-1014x1024.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-16-at-8.15.04-PM-1014x1024.jpeg') !important;">
 	                                                                    <a href="/news/staff-health-and-fitness/" title="Staff Health &amp; Fitness" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-16-at-8.15.04-PM-1014x1024.jpeg" class="vc_gitem-zone-img" alt="Staff Health &amp; Fitness">
+	                                                                    <img src="/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-16-at-8.15.04-PM-1014x1024.jpeg" class="vc_gitem-zone-img" alt="Staff Health &amp; Fitness">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -174,9 +174,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 400px; top: 635px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.28.02-PM-768x1024.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.28.02-PM-768x1024.jpeg') !important;">
 	                                                                    <a href="/news/sinopec-sticker-promotion-puttalam/" title="Sinopec Sticker Promotion in Puttalam" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.28.02-PM-768x1024.jpeg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion in Puttalam">
+	                                                                    <img src="/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.28.02-PM-768x1024.jpeg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion in Puttalam">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -203,9 +203,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 800px; top: 663px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix ">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.35.02-PM-1-1024x768.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.35.02-PM-1-1024x768.jpeg') !important;">
 	                                                                    <a href="/news/customers-seminar-was-held-in-bandarawela/" title="Customers seminar was held in Bandarawela" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.35.02-PM-1-1024x768.jpeg" class="vc_gitem-zone-img" alt="Customers seminar was held in Bandarawela">
+	                                                                    <img src="/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-4.35.02-PM-1-1024x768.jpeg" class="vc_gitem-zone-img" alt="Customers seminar was held in Bandarawela">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -232,9 +232,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 0px; top: 878px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix ">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-3.05.04-PM-768x1024.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-3.05.04-PM-768x1024.jpeg') !important;">
 	                                                                    <a href="/news/secret-santa-2/" title="Secret Santa" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-3.05.04-PM-768x1024.jpeg" class="vc_gitem-zone-img" alt="Secret Santa">
+	                                                                    <img src="/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-3.05.04-PM-768x1024.jpeg" class="vc_gitem-zone-img" alt="Secret Santa">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -261,9 +261,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 800px; top: 1383px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix ">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2018/09/NY-1024x1024.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2018/09/NY-1024x1024.jpg') !important;">
 	                                                                    <a href="/news/2021-new-year-2/" title="2021 New Year" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2018/09/NY-1024x1024.jpg" class="vc_gitem-zone-img" alt="2021 New Year">
+	                                                                    <img src="/wp-content/uploads/2018/09/NY-1024x1024.jpg" class="vc_gitem-zone-img" alt="2021 New Year">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -290,9 +290,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 400px; top: 1495px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-2.23.04-PM.jpeg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-2.23.04-PM.jpeg') !important;">
 	                                                                    <a href="/news/sinopec-sticker-promotion-colombo-gampaha/" title="Sinopec Sticker Promotion Colombo &amp; Gampaha" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-2.23.04-PM.jpeg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion Colombo &amp; Gampaha">
+	                                                                    <img src="/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-04-at-2.23.04-PM.jpeg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion Colombo &amp; Gampaha">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -319,9 +319,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 0px; top: 1757px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2019/02/badulla-regional-technical-meeting-of-sinopec-11-1024x576.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2019/02/badulla-regional-technical-meeting-of-sinopec-11-1024x576.jpg') !important;">
 	                                                                    <a href="/news/badulla-regional-technical-meeting-of-sinopec/" title="Badulla Regional Technical Meeting of SINOPEC" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2019/02/badulla-regional-technical-meeting-of-sinopec-11-1024x576.jpg" class="vc_gitem-zone-img" alt="Badulla Regional Technical Meeting of SINOPEC">
+	                                                                    <img src="/wp-content/uploads/2019/02/badulla-regional-technical-meeting-of-sinopec-11-1024x576.jpg" class="vc_gitem-zone-img" alt="Badulla Regional Technical Meeting of SINOPEC">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -348,9 +348,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 800px; top: 2019px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2018/09/northern-construction-association-8.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2018/09/northern-construction-association-8.jpg') !important;">
 	                                                                    <a href="/news/dealer-meeting-at-northern-construction-association/" title="Dealer Meeting at Northern Construction Association" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2018/09/northern-construction-association-8.jpg" class="vc_gitem-zone-img" alt="Dealer Meeting at Northern Construction Association">
+	                                                                    <img src="/wp-content/uploads/2018/09/northern-construction-association-8.jpg" class="vc_gitem-zone-img" alt="Dealer Meeting at Northern Construction Association">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -377,9 +377,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-96 vc_visible-item" style="position: absolute; left: 400px; top: 2215px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2018/09/kurunegala-sticker-promo-featured.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2018/09/kurunegala-sticker-promo-featured.jpg') !important;">
 	                                                                    <a href="/news/sinopec-sticker-promotion-kurunegala/" title="Sinopec Sticker Promotion Kurunegala" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2018/09/kurunegala-sticker-promo-featured.jpg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion Kurunegala">
+	                                                                    <img src="/wp-content/uploads/2018/09/kurunegala-sticker-promo-featured.jpg" class="vc_gitem-zone-img" alt="Sinopec Sticker Promotion Kurunegala">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -406,9 +406,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-217 vc_visible-item" style="position: absolute; left: 0px; top: 2432px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2018/09/school-accessories-donation-14.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2018/09/school-accessories-donation-14.jpg') !important;">
 	                                                                    <a href="/news/donation-of-school-accessories/" title="Donation of School Accessories including School Bags" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2018/09/school-accessories-donation-14.jpg" class="vc_gitem-zone-img" alt="Donation of School Accessories including School Bags">
+	                                                                    <img src="/wp-content/uploads/2018/09/school-accessories-donation-14.jpg" class="vc_gitem-zone-img" alt="Donation of School Accessories including School Bags">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>
@@ -435,9 +435,9 @@
 	                                                    <div class="vc_grid-item vc_clearfix vc_col-sm-4 vc_grid-item-zone-c-bottom vc_grid-term-218 vc_visible-item" style="position: absolute; left: 800px; top: 2723px;">
 	                                                        <div class="vc_grid-item-mini vc_clearfix ">
 	                                                            <div class="vc_gitem-animated-block">
-	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('https://www.iol.lk/wp-content/uploads/2018/09/rugby.jpg') !important;">
+	                                                                <div class="vc_gitem-zone vc_gitem-zone-a vc_gitem-is-link" style="background-image: url('/wp-content/uploads/2018/09/rugby.jpg') !important;">
 	                                                                    <a href="/news/dialog-inter-club-rugby-tournament/" title="Dialog Inter Club Rugby Tournament" class="vc_gitem-link vc-zone-link"></a>
-	                                                                    <img src="https://www.iol.lk/wp-content/uploads/2018/09/rugby.jpg" class="vc_gitem-zone-img" alt="Dialog Inter Club Rugby Tournament">
+	                                                                    <img src="/wp-content/uploads/2018/09/rugby.jpg" class="vc_gitem-zone-img" alt="Dialog Inter Club Rugby Tournament">
 	                                                                    <div class="vc_gitem-zone-mini"></div>
 	                                                                </div>
 	                                                            </div>

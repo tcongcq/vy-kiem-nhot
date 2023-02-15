@@ -1,3 +1,18 @@
+<style type="text/css">
+    .call-to-action-area .box, .call-to-action-area .box:before, .call-to-action-area .box:after {
+        background-color: #000;
+    }
+    .call-to-action-area{
+        background-image: linear-gradient(to bottom, #1c0b07, #000);
+    }
+    .call-to-action-area .box a{
+        border: 2px solid #000;
+        color: #000;
+    }
+    .call-to-action-area .box a:hover{
+        color: #ba0913;
+    }
+</style>
 <div class="vc_row wpb_row vc_row-fluid">
     <div class="wpb_column vc_column_container vc_col-sm-12">
         <div class="vc_column-inner">
@@ -12,7 +27,7 @@
                                             <h2>Get first class lubricants near you</h2>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="/get-in-touch">CONTACT US</a>
+                                            <a href="/contact">CONTACT US</a>
                                         </div>
                                     </div>
                                 </div>
@@ -133,4 +148,7 @@
             </div>
         </div>
     </div>
+</div>
+<div style="user-select: none;">
+    <img src="/theme/img/homepage/banner-1.jpg">
 </div>

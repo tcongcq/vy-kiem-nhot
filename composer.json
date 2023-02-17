@@ -8,7 +8,7 @@
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "innosoft/cms": "^2.2",
-        "innosoft/filemanager": "^2.0",
+        "tcongcq/innosoft-filemanager": "dev-master",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7"
@@ -28,7 +28,7 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "InnoSoft\\CMS\\": "vendor/innosoft/cms/src",
-            "InnoSoft\\FileManager\\": "vendor/innosoft/filemanager/src"
+            "InnoSoft\\FileManager\\": "vendor/tcongcq/innosoft-filemanager/src"
         },
         "files": [
             "helpers.php"

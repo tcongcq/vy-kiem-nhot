@@ -4,13 +4,15 @@
         padding: 5px;
         border: 1px solid #ccc;
         border-radius: 4px;
+        text-align: center;
     }
     .attachment img{ width: 100%; height: auto; }
     .attachment .el {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
+        margin-top: 2px;
         position: relative;
         user-select: none;
-        float: left!important;
+        display: inline-block;
         margin-left: 1px;
         margin-right: 1px;
     }
@@ -117,14 +119,14 @@
                 <div class="form-group">
                     <label for="attachments" class="control-label">Album ảnh</label>
                     <div class="btn btn-default form-control" name="attachments" id="attachments"
-                        onclick="open_popup('{{ url('admin/filemanager?secret='.bcrypt(env('APP_KEY')).'&fieldID=addimage&callback=choose_image' ) }}')"
+                        onclick="open_popup('{{ url('admin/filemanager?secret='.bcrypt(env('APP_KEY')).'&fieldID=addimage&callback=choose_image&typeSelect=multi' ) }}')"
                     >Thêm file</div>
 		        </div>
                 <div class="media attachment">
                 <!-- ko if: toolbar.album_images().length > 0 -->
                     <!-- ko foreach: toolbar.album_images -->
                     <div class="w-74 el">
-                        <span class="btn-times"><i class="fa fa-times"></i></span>
+                        <span class="btn-times" data-bind="click: toolbar.remove_image"><i class="fa fa-times"></i></span>
                         <div class="image-view" 
                             data-bind="style:{'background-image': toolbar.get_image($data)}"
                         ></div>
@@ -132,7 +134,7 @@
                     <!-- /ko -->
                 <!-- /ko -->
                 <!-- ko if: toolbar.album_images().length == 0 -->
-                    <div class="text-center">Album ảnh trống.</div>
+                    <div class="text-center" style="min-height: 78px;">Album ảnh trống.</div>
                 <!-- /ko -->
                 </div>
 		    </div>

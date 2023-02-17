@@ -5,7 +5,37 @@
         border: 1px solid #ccc;
         border-radius: 4px;
     }
-    .attachment img{ width: 100%; }
+    .attachment img{ width: 100%; height: auto; }
+    .attachment .el {
+        margin-bottom: 5px;
+        position: relative;
+        user-select: none;
+        float: left!important;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    .attachment .el .image-view{
+        width: 100%;
+        height: 74px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .attachment .el .btn-times{
+        position: absolute;
+        left: calc(50% - 15px);
+        top: calc(50% - 15px);
+        padding: 5px 10px;
+        background: #a94442;
+        color: #fff;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .attachment .el:hover .btn-times{
+        opacity: 1;
+    }
 </style>
 <div class="row">
     <div class="col-md-4 frm-desc">
@@ -84,16 +114,26 @@
     	<legend>Nội dung bài viết</legend>
     	<div class="row">
 		    <div class="col-md-4">
-		        <div class="form-group">
-		            <label for="attachments" class="control-label">attachments</label>
-		            <input type="text" class="form-control" name="attachments" id="attachments" data-bind="value: current().attachments" placeholder="attachments...">
+                <div class="form-group">
+                    <label for="attachments" class="control-label">Album ảnh</label>
+                    <div class="btn btn-default form-control" name="attachments" id="attachments"
+                        onclick="open_popup('{{ url('admin/filemanager?secret='.bcrypt(env('APP_KEY')).'&fieldID=addimage&callback=choose_image' ) }}')"
+                    >Thêm file</div>
 		        </div>
                 <div class="media attachment">
-                    @for($i=0; $i<50; $i++)
-                    <div class="w-74 pull-left el">
-                        <img src="{{ url('assets/images/admin/content.png') }}">
+                <!-- ko if: toolbar.album_images().length > 0 -->
+                    <!-- ko foreach: toolbar.album_images -->
+                    <div class="w-74 el">
+                        <span class="btn-times"><i class="fa fa-times"></i></span>
+                        <div class="image-view" 
+                            data-bind="style:{'background-image': toolbar.get_image($data)}"
+                        ></div>
                     </div>
-                    @endfor
+                    <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: toolbar.album_images().length == 0 -->
+                    <div class="text-center">Album ảnh trống.</div>
+                <!-- /ko -->
                 </div>
 		    </div>
 		    <div class="col-md-8">

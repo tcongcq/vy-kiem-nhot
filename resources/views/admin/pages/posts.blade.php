@@ -37,6 +37,7 @@ function ToolBar() {
         self.form_data.current({is_show: 1});
         $('#language').selectpicker('val', 'vi');
         $('#post_category_id').selectpicker('val', null);
+        self.album_images([]);
         CKEDITOR.instances.content.setData('');
         self.view('form');
     };
@@ -47,6 +48,7 @@ function ToolBar() {
         $('#language').selectpicker('val', e.language);
         $('#post_category_id').selectpicker('val', e.post_category_id);
         CKEDITOR.instances.content.setData(e.content);
+        self.album_images(e.attachments ? JSON.parse(e.attachments) : []);
         self.view('form');
     };
 
@@ -88,6 +90,7 @@ function ToolBar() {
     	self.form_data.current().is_show                = self.form_data.current().is_show == true ? 1 : 0;
         self.form_data.current().alias                  = $('#alias').val();
         self.form_data.current().avatar                 = $('#avatar').attr('data-src')!=""? $('#avatar').attr('data-src') : '';
+        self.form_data.current().attachments            = JSON.stringify(self.album_images());
     };
 
     self.saved = function () {
@@ -118,17 +121,32 @@ function ToolBar() {
         return _str.latinise().toLowerCase().replace(/ /g,'-').replace(/[-]+/g, '-').replace(/[^\w-]+/g,'');
     };
 
+    self.parseArray = function(str){
+        try { return JSON.parse(str) } catch (e) { return str };
+    };
+    self.isArray = function(val) {
+        return val instanceof Array || val instanceof Object ? true : false;
+    };
+
     self.add_album_image = function(path){
         let album = self.album_images();
-        album.push(path);
+        let paths = self.parseArray(path);
+        album = album.concat( self.isArray(paths) ? paths : [paths] );
         /*  filter unique album images  */
         self.album_images(album.filter((v,i,a)=>a.indexOf(v)==i));
-        console.log(self.album_images())
+    };
+    self.remove_image = function(path){
+        let album = self.album_images();
+        album = album.filter(function(item){
+            return item !== path
+        })
+        self.album_images(album);
     };
 
     self.get_image = function(path){
         return 'url({{url('/')}}/' + path + ')';
     };
+
 
 }
 var toolbar = new ToolBar();

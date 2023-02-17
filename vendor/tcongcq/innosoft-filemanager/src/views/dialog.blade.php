@@ -34,7 +34,8 @@
         type: '{{ Request::has("CKEditor") ? 'CKEditor':(Request::has("backgroundID") ? 'backgroundID': (Request::has("imageID") ? 'imageID':'fieldID')) }}',
         fieldID: '{{ Request::has("CKEditor") ? Request::get("CKEditor"):(Request::has("backgroundID") ? Request::get("backgroundID"):(Request::has("imageID") ? Request::get("imageID"):Request::get("fieldID"))) }}',
         CKEditorFuncNum: '{{ Request::get("CKEditorFuncNum") }}',
-        callback: '{{ Request::get("callback") }}'
+        callback: '{{ Request::get("callback") }}',
+        typeSelect: '{{ Request::has("typeSelect") ? Request::get("typeSelect"):"single" }}'
         "></filemanager>
 </body>
 </html>

@@ -46,6 +46,37 @@ function ToolBar() {
         self.view('form');
     };
 
+    self.grid_filters = function(){
+        var filters = [];
+        $('[filter-colname]').each(function(){
+            var value = null;
+            if ($(this).hasClass('selectpicker'))
+                value = $(this).selectpicker('val');
+            if ($(this).hasClass('filter_date')){
+                value = $(this).parent().data("DateTimePicker").date().format('YYYY-MM-DD');
+                if ($(this).attr('filter-operator') == '>=')
+                    value += ' 00:00:00';
+                else
+                    value += ' 23:59:59';
+            }
+            if(value !== null){                    
+                var filter = {
+                    key: $(this).attr('filter-colname'),
+                    value: $(this).attr('filter-operator') == 'like' ? '%'+value+'%' : value
+                };
+                if ($(this).attr('filter-operator') != 'in')
+                    filter.operator = $(this).attr('filter-operator') ? $(this).attr('filter-operator') : '='
+                filters.push(filter);
+            }
+        });
+        self.grid_data.filters(filters);
+        $('.grid-filter-container:not(.print)').toggleClass('open');
+    };
+    self.grid_unfilters = function(){
+        self.grid_data.filters([]);
+        $('select[filter-colname]').selectpicker('val', '');
+    };
+
     self.prepare_save = function(){
         self.form_data.current().language       = $('#language').selectpicker('val');
         self.form_data.current().description    = CKEDITOR.instances.description.getData();
@@ -86,6 +117,7 @@ var toolbar = new ToolBar();
     token: '{{ csrf_token() }}',
     buttons: ['add', 'edit', 'delete'],
     cellsrenderer: toolbar.cellsrenderer,
+    leftToolbar: 'filters-toolbar',
     add: toolbar.add,
     edit: toolbar.edit,
     callback: toolbar.grid_init,
@@ -113,6 +145,63 @@ var toolbar = new ToolBar();
     saved: toolbar.saved,
     template: 'edit-form',
     callback: toolbar.form_init" data-bind="visible: toolbar.view() === 'form'"></edit-form>
+
+<script type="text/html" id="filters-toolbar">
+    <div class="grid-filter-container filter pull-left">
+        <div class="btn-group">
+            <button data-toggle="tooltip" title="Lọc dữ liệu" class="btn btn-default grid-filter-btn" style="margin-left: 5px;" onclick="$('.grid-filter-container.filter').toggleClass('open');">
+                <span class="glyphicon glyphicon-filter"></span> Lọc
+            </button>
+        </div>
+        <div class="grid-filter-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Cho phép hiển thị</label>
+                                <select class="selectpicker show-tick form-control" filter-colname="is_show" filter-operator="in" data-live-search="true" multiple data-selected-text-format="count > 3" data-actions-box="true">
+                                    <option value="1">Hiển thị</option>
+                                    <option value="0">Ẩn</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Ngôn ngữ</label>
+                                <select class="selectpicker show-tick form-control" filter-colname="language" filter-operator="in" data-live-search="true" multiple data-selected-text-format="count > 3" data-actions-box="true">
+                                @foreach($languages as $lang)
+                                    <option value="{{ $lang->code }}">{{ $lang->code }} - {{ $lang->name }}</option>
+                                @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div style="margin-top: 25px;">
+                                <div class="btn btn-primary" data-bind="click: toolbar.grid_filters">
+                                    <span class="glyphicon glyphicon-filter"></span> Lọc
+                                </div>
+                                <div class="btn btn-default" style="margin-left: 5px;" data-bind="click: toolbar.grid_unfilters">
+                                    <span class="glyphicon glyphicon-remove"></span> Bỏ lọc tất cả
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bs-callout bs-callout-info">
+                        <h4>Lọc dữ liệu</h4>
+                        <p>Bạn có thể dễ dàng lọc thông tin các danh mục theo nhiều tiêu chí khác nhau:</p>
+                        <ul style="padding-left: 15px;">
+                            <li>Cho phép hiển thị</li>
+                            <li>Ngôn ngữ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
 
 <script type="text/html" id="edit-form">
 @include('admin.forms.product_category')

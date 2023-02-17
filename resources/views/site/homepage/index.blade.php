@@ -8,7 +8,7 @@
 
     @include('site.homepage.introduce')
     @include('site.homepage.our_products')
-    @include('site.homepage.lasted_news')
+    
     @include('site.homepage.recent_products')
 
     @include('site.includes.footer')

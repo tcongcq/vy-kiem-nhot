@@ -90,6 +90,9 @@
     <script src="/theme/customizer/plugins/jQuery.style.switcher.min.js"></script>
     <script src="/theme/customizer/plugins/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/theme/customizer/js/customizer.js"></script>
+    
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/masonry.pkgd.min.js"></script>
 
 </body>
 

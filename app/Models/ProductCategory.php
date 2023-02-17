@@ -26,4 +26,8 @@ class ProductCategory extends Model
         'note' => '',
     ];
 
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

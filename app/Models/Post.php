@@ -34,4 +34,8 @@ class Post extends Model
         'language' => '',
     ];
 
+    public function post_category(){
+        return $this->belongsTo(PostCategory::class);
+    }
+
 }

@@ -159,7 +159,7 @@ product-template-default single single-product postid-2330 theme-autocare woocom
 	                            </div>
 	                        </div>
 	                    </div>
-	                    <meta itemprop="url" content="/product/{{ $pr->alias }}">
+	                    <meta itemprop="url" content="/product/{{ $product->alias }}">
 	                </div>
 	            </div>
 	            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">

@@ -12,7 +12,7 @@
 <div class="page-wrapper">
     @include('site.includes.header')
 
-    <section class="breadcrumb-area">
+    <section class="breadcrumb-area" style="background-image: url('{{ url(!empty($category->image) ? $category->image : '/theme/img/resources/breadcrumb-bg.jpg') }}')">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

@@ -47,9 +47,9 @@ return [
                 'icon' => 'glyphicon glyphicon-dashboard',
                 'ctrl' => '\App\Http\Controllers\Admin\ConfigProductController'
             ],
-            'config-theme' => [
+            'config-content' => [
                 'icon' => 'glyphicon glyphicon-dashboard',
-                'ctrl' => '\App\Http\Controllers\Admin\ConfigThemeController'
+                'ctrl' => '\App\Http\Controllers\Admin\ConfigContentController'
             ],
         ],
         'setting-management' => [

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use InnoSoft\CMS\API;
-use InnoSoft\CMS\Account;
+use App\Models\Config;
 
-class ConfigThemeController extends API
+class ConfigContentController extends API
 {   
     public function __construct() {
-        $this->M = new Account();
-        $this->view = 'admin.pages.config_themes';
+        $this->M = new Config();
+        $this->view = 'admin.pages.config_contents';
         $this->validator_msg = [];
     }
 }

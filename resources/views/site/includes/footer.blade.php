@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                    <p>Assembled by <a href="https://jgsw.global/">Jigsaw Ensemble</a>
+                    <p>Assembled by <a href="/">Sinopec VN</a>
                     </p>
                 </div>
             </div>

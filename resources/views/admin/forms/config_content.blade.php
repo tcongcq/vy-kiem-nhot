@@ -1,6 +1,7 @@
 <div class="clearfix blocks">
     <div class="pull-left">
         <div class="item-head">Cấu hình</div>
+        <div data-bind="css: toolbar.activeTab() == 'homepage' ? 'item active' : 'item', click: toolbar.switch_tab.bind($data, 'homepage')" class="item">Trang Chủ</div>
         <div data-bind="css: toolbar.activeTab() == 'contact_us' ? 'item active' : 'item', click: toolbar.switch_tab.bind($data, 'contact_us')" class="item">Trang Liên Hệ</div>
         <div data-bind="css: toolbar.activeTab() == 'about_us' ? 'item active' : 'item', click: toolbar.switch_tab.bind($data, 'about_us')" class="item">Trang Về Chúng Tôi</div>
         <div data-bind="css: toolbar.activeTab() == 'products' ? 'item active' : 'item', click: toolbar.switch_tab.bind($data, 'products')" class="item">Trang Sản Phẩm</div>
@@ -24,15 +25,19 @@
             </div>
             <div class="col-md-5 m-b-t-5 form-horizontal">
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Ngôn ngữ</label>
+                    <label for="languageChoosen" class="col-sm-3 control-label">Ngôn ngữ</label>
                     <div class="col-sm-9">
-                        <select class="form-control">
-                            <option>English</option>
-                            <option>Tiếng Việt</option>
+                        <select class="form-control" id="languageChoosen" name="languageChoosen" onchange="toolbar.change_lang(event)">
+                        @foreach($languages as $lang)
+                            <option value="{{ $lang->code }}" {{ $lang->code == \App::getLocale() ? 'selected' : '' }}>{{ $lang->name }}</option>
+                        @endforeach
                         </select>
                     </div>
                   </div>
             </div>
+        </div>
+        <div data-bind="visible: toolbar.activeTab() == 'homepage'" style="display: none;">
+            @include('admin.forms.config_content.homepage')
         </div>
         <div data-bind="visible: toolbar.activeTab() == 'contact_us'" style="display: none;">
             @include('admin.forms.config_content.contact_us')

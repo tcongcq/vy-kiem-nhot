@@ -17,8 +17,8 @@
             <input type="text" class="form-control" name="footer_address_title" id="footer_address_title" data-bind="value: toolbar.current().footer_address_title" placeholder="ADDRESS" />
         </div>
         <div class="form-group pl-25">
-            <label for="footer_phone" class="control-label">1.2. Địa chỉ</label>
-            <input type="text" class="form-control" name="footer_phone" id="footer_phone" data-bind="value: toolbar.current().footer_phone" placeholder="** ***, *** *****,
+            <label for="footer_address" class="control-label">1.2. Địa chỉ</label>
+            <input type="text" class="form-control" name="footer_address" id="footer_address" data-bind="value: toolbar.current().footer_address" placeholder="** ***, *** *****,
 **** ****, Viet Nam" />
         </div>
         <div class="form-group mt-15">

@@ -34,25 +34,11 @@ return [
                 'ctrl' => '\App\Http\Controllers\Admin\ContactUsController'
             ],
         ],
-        'theme-management' => [
-            'config-homepage' => [
-                'icon' => 'glyphicon glyphicon-dashboard',
-                'ctrl' => '\App\Http\Controllers\Admin\ConfigHomepageController'
-            ],
-            'config-post' => [
-                'icon' => 'glyphicon glyphicon-dashboard',
-                'ctrl' => '\App\Http\Controllers\Admin\ConfigPostController'
-            ],
-            'config-product' => [
-                'icon' => 'glyphicon glyphicon-dashboard',
-                'ctrl' => '\App\Http\Controllers\Admin\ConfigProductController'
-            ],
+        'setting-management' => [
             'config-content' => [
                 'icon' => 'glyphicon glyphicon-dashboard',
                 'ctrl' => '\App\Http\Controllers\Admin\ConfigContentController'
             ],
-        ],
-        'setting-management' => [
             'setting' => [
                 'icon' => 'glyphicon glyphicon-dashboard',
                 'ctrl' => '\App\Http\Controllers\Admin\SettingController'

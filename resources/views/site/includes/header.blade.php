@@ -12,7 +12,37 @@
 .header-contact-info ul li i.flaticon-interface-1::before {
     top: 1px;
 }
+.stricky-fixed .header-lower.navbar .navbar-nav > li.active > a, .stricky-fixed .header-lower.navbar .navbar-nav > li:hover > a {
+    color: #fff !important;
+    background: #e2001a;
+}
+@media (min-width: 641px){
+    .header-lower.navbar .navbar-nav>li:last-child>a {
+        padding-right: 15px !important;
+    }
+}
+.lang-group .lang-name{
+    color: #474747;
+    cursor: pointer;
+    user-select: none;
+}
+.lang-group .dropdown-menu{
+    padding: 0;
+    border-radius: 0;
+}
+.lang-group .dropdown-menu>li>a{
+    cursor: pointer;
+}
+.lang-group .dropdown-menu>.active>a, .lang-group .dropdown-menu>.active>a:focus, .lang-group .dropdown-menu>.active>a:hover{
+    background: #e2001a !important;
+}
 </style>
+<script type="text/javascript">
+function change_lang(lang){
+    if (lang != '{{ $locale }}')
+        window.location.replace("{{ url('lang/change?lang=') }}"+lang);
+}
+</script>
 <header class="main-header stricky">
     <div class="header-top">
         <div class="container">
@@ -31,7 +61,22 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12"></div>
+                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 text-right">
+                        <div class="btn-group lang-group" role="group">
+                            <div class="lang-name" data-toggle="dropdown">
+                                {{ $locale == 'vi' ? 'Tiếng Việt' : 'English' }}
+                                <span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="{{ $locale == 'vi' ? 'active' : '' }}">
+                                    <a onClick="change_lang('vi')">Tiếng Việt</a>
+                                </li>
+                                <li class="{{ $locale == 'en' ? 'active' : '' }}">
+                                    <a onClick="change_lang('en')">English</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,20 +97,21 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-741 {{ uri() == '' ? 'active' : ''}}">
-                        <a title="Home" href="{{ url('/')  }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Home <span class="decor"></span>
+                        <a title="{{ __('locale.menu.home') }}" href="{{ url('/')  }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">{{ __('locale.menu.home') }}
                         </a>
                     </li>
                     <li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742 {{ uri() == 'about-us' ? 'active' : ''}}">
-                        <a title="About Us" href="{{ url('about-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">About Us <span class="decor"></span>
+                        <a title="{{ __('locale.menu.about-us') }}" href="{{ url('about-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">{{ __('locale.menu.about-us') }}
                         </a>
                     </li>
                     <li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-930 dropdown {{ (uri() == 'products' || uri() == 'product-category') ? 'active' : ''}}">
-                        <a title="Products" href="{{ url('products') }}" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Products <span class="decor"></span>
+                        <a title="{{ __('locale.menu.products') }}" href="{{ url('products') }}" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">{{ __('locale.menu.products') }}
                         </a>
                         <ul role="menu" class="dropdown-menu ">
                             @foreach($products as $cat)
                             <li id="menu-item-977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-977">
-                                <a title="{{ $cat->name }}" href="/product-category/{{ $cat->alias }}">{{ $cat->name }} <span class="decor"></span>
+                                <a title="{{ $cat->name }}" href="/product-category/{{ $cat->alias }}">
+                                    {{ $cat->name }}
                                 </a>
                             </li>
                             @endforeach
@@ -73,11 +119,11 @@
                         <div class="dropdown-btn"></div>
                     </li>
                     <li id="menu-item-954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-954 {{ uri() == 'news' ? 'active' : ''}}">
-                        <a title="News" href="{{ url('news') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">News <span class="decor"></span>
+                        <a title="{{ __('locale.menu.news') }}" href="{{ url('news') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">{{ __('locale.menu.news') }}
                         </a>
                     </li>
                     <li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-939 {{ uri() == 'contact-us' ? 'active' : ''}}">
-                        <a title="Contact" href="{{ url('contact-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Contact <span class="decor"></span>
+                        <a title="{{ __('locale.menu.contact') }}" href="{{ url('contact-us') }}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">{{ __('locale.menu.contact') }}
                         </a>
                     </li>
                 </ul>

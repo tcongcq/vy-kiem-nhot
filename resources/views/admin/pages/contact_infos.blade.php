@@ -14,6 +14,7 @@ function ToolBar() {
     };
     self.form_init = function (form) {
         self.form_data = form;
+        $('.selectpicker').selectpicker();
     };
     self.grid = function (attr, param) {
         return self.grid_data[attr](param);
@@ -21,18 +22,21 @@ function ToolBar() {
 
     self.add = function (e) {
         self.form_data.method('add');
-        self.form_data.current({});
+        $('#language').selectpicker('val', 'vi');
+        self.form_data.current({order: 0});
         self.view('form');
     };
 
     self.edit = function (e) {
         self.form_data.method('update');
+        $('#language').selectpicker('val', e.language);
         self.form_data.current(e);
         self.view('form');
     };
 
     self.prepare_save = function(){
-    	self.form_data.current().is_show = self.form_data.current().is_show == true ? 1 : 0;
+        self.form_data.current().language  = $('#language').selectpicker('val');
+    	self.form_data.current().is_show   = self.form_data.current().is_show == true ? 1 : 0;
     };
 
     self.saved = function () {
@@ -65,6 +69,8 @@ var toolbar = new ToolBar();
         contact_name: 'Liên hệ',
         title: 'Chức danh',
         is_show: 'Ẩn / Hiện',
+        order: 'Sắp xếp',
+        language: 'Ngôn ngữ'
     },
     sorts: ['contact_name', 'title', 'is_show'],
     url: '{{ uri() }}',

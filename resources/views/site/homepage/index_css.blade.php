@@ -276,6 +276,9 @@ a.pcat .title h3 {
 .pcat img {
     width: 100%;
 }
+.stricky .lang-group .lang-name{
+    color: #fff;
+}
 </style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
 .vc_custom_1535614439582{margin-top: 80px !important;margin-bottom: 60px !important;}

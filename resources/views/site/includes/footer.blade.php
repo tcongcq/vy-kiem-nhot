@@ -1,20 +1,26 @@
+<?php
+    $lang = \App::getLocale();
+    $config = Config::get_config($lang);
+?>
 <footer class="footer-area 111" style="background-image:url('{{ url("theme/includes/footer-background.jpg") }}');">
     <div class="footer-middle">
         <div class="container">
             <div class="row clearfix">
                 <div id="bunch_about_us-2" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 single-footer-widget footer-widget widget_bunch_about_us">
                     <div class="footer-logo">
-                        <img src="theme/img/resources/logo.png" alt="Awesome Footer Logo">
+                        <img src="{{ url('wp-content/uploads/2018/08/sinopec-logo.png') }}" alt="Awesome Footer Logo">
                     </div>
                     <div class="text">
-                        <p>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore.</p>
+                        <p>
+                            {{ $config['footer_introduce'] }}
+                        </p>
                     </div>
                 </div>
                 <div id="text-3" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 single-footer-widget footer-widget widget_text">
                     <div class="textwidget">
                         <p></p>
                         <p>
-                            <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1821428876633!2d79.88829031431825!3d6.987800594952018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f7d947dc8c25%3A0xf9b22c8a71fc3680!2sInterocean+Lubricants+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1535973459356" width="100%" height="210px" frameborder="0" allowfullscreen=""></iframe>
+                            <iframe style="border: 0;" src="{{ $config['footer_maps'] }}" width="100%" height="210px" frameborder="0" allowfullscreen=""></iframe>
                         </p>
                     </div>
                 </div>
@@ -26,8 +32,8 @@
                                     <span class="flaticon-map"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>Address</h4>
-                                    <p>371, Negombo Road, <br>Wattala 11300, Sri Lanka </p>
+                                    <h4>{{ $config['footer_address_title'] }}</h4>
+                                    <p>{{ $config['footer_address'] }}</p>
                                 </div>
                             </li>
                             <li class="email">
@@ -35,9 +41,9 @@
                                     <span class="flaticon-note"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>Ask Anything Here</h4>
+                                    <h4>{{ $config['footer_email_title'] }}</h4>
                                     <p>
-                                        <a href="mailto:info@interocean.lk">info@interocean.lk</a>
+                                        <a href="mailto:{{ $config['footer_email'] }}">{{ $config['footer_email'] }}</a>
                                     </p>
                                 </div>
                             </li>
@@ -46,9 +52,9 @@
                                     <span class="flaticon-telephone"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>Call Us</h4>
+                                    <h4>{{ $config['footer_phone_title'] }}</h4>
                                     <p>
-                                        <a href="tel:%2B94114343747">+94 11 434 3747</a>
+                                        <a href="tel:{{ preg_replace('/\s+/', '', $config['footer_phone']) }}">{{ $config['footer_phone'] }}</a>
                                     </p>
                                 </div>
                             </li>
@@ -67,8 +73,9 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                    <p>Assembled by <a href="/">Sinopec VN</a>
-                    </p>
+                    <div class="copy-right">
+                        <p style="margin-bottom: 0px;">Assembled by <a href="/">Sinopec VN</a></p>
+                    </div>
                 </div>
             </div>
         </div>

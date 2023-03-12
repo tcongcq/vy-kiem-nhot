@@ -9,17 +9,21 @@ class ContactInfo extends Model
         'contact_name',
         'contact_email',
         'contact_phone',
-        'subject',
-        'message',
-        'status',
+        'title',
+        'order',
+        'position',
+        'language',
+        'is_show'
     ];
     public $rules       = [
-        'contact_name' => 'required',
+        'contact_name'  => 'required',
         'contact_email' => '',
         'contact_phone' => '',
-        'subject' => '',
-        'message' => '',
-        'status' => '',
+        'title'         => '',
+        'order'         => 'required',
+        'position'      => '',
+        'language'      => '',
+        'is_show'       => ''
     ];
 
 }

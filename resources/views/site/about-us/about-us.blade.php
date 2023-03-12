@@ -316,7 +316,14 @@ a.pcat .title h3 {
 .page-id-103 .vc_message_box {
     padding: 15px 20px;
 }
+.stricky .lang-group .lang-name{
+    color: #fff;
+}
 </style>
+<?php
+    $lang = \App::getLocale();
+    $config = Config::get_config($lang);
+?>
 <div class="page-wrapper">
     @include('site.includes.header')
     
@@ -325,7 +332,7 @@ a.pcat .title h3 {
             <div class="row">
                 <div class="col-md-12">
                     <div class="breadcrumbs text-center">
-                        <h1>ABOUT US</h1>
+                        <h1>{{ __('locale.menu.about-us') }}</h1>
                         <h4></h4>
                     </div>
                 </div>
@@ -347,28 +354,9 @@ a.pcat .title h3 {
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
                                                 <p>
-                                                    <strong>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.</strong>
+                                                    {!! $config['about_us_content'] !!}
                                                 </p>
                                             </div>
-                                        </div>
-                                        <div class="vc_empty_space" style="height: 30px">
-                                            <span class="vc_empty_space_inner"></span>
-                                        </div>
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards. China Petroleum &amp; Chemical Corporation (“Sinopec Corp”) is one of the largest integrated Energy and Chemical Companies in China. The scope of its business mainly covers oil and gas exploration, extraction and production, pipeline transmission, oil refining, marketing, storage and transportation of petrochemicals, chemical fibers, chemical fertilizers and other products. It also exports/imports crude oil, natural gases, refined oil products, petrochemicals, chemicals and other commodities and is focused on research, development and advanced technologies. Sinopec Corp was placed at No. 3 in 2017, on the world ranking in Global Fortune 500 Companies.</p>
-                                            </div>
-                                        </div>
-                                        <div class="vc_empty_space" style="height: 30px">
-                                            <span class="vc_empty_space_inner"></span>
-                                        </div>
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Sinopec Lubricants are meeting ISO 9001, ISO/TSI6949, ISO 14001, OSHAS 18000 and AS 9100 standards and blended to API/ACEA/OEM /DIN/HSE/JASO/ACEA standards and maintains Kaizen and Total Quality Management System.</p>
-                                            </div>
-                                        </div>
-                                        <div class="vc_empty_space" style="height: 20px">
-                                            <span class="vc_empty_space_inner"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -381,28 +369,28 @@ a.pcat .title h3 {
                                         </div>
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h3>Vision</h3>
+                                                <h3>{{ __('locale.about-us.vision') }}</h3>
                                             </div>
                                         </div>
                                         <div class="vc_empty_space" style="height: 20px">
                                             <span class="vc_empty_space_inner"></span>
                                         </div>
                                         <div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-chino">
-                                            <h4 style="text-align: left;">“To make SINOPEC the most preferred lubricant brand whilst being customer centric and reliable.”</h4>
+                                            <h4 style="text-align: left;">{!! $config['about_us_vision'] !!}</h4>
                                         </div>
                                         <div class="vc_empty_space" style="height: 20px">
                                             <span class="vc_empty_space_inner"></span>
                                         </div>
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h3>Mission</h3>
+                                                <h3>{{ __('locale.about-us.mission') }}</h3>
                                             </div>
                                         </div>
                                         <div class="vc_empty_space" style="height: 20px">
                                             <span class="vc_empty_space_inner"></span>
                                         </div>
                                         <div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-chino">
-                                            <h4 style="text-align: left;">“To provide quality lubricants to the entire industry whilst creating a sustainable market.”</h4>
+                                            <h4 style="text-align: left;">{!! $config['about_us_mission'] !!}</h4>
                                         </div>
                                         <div class="vc_empty_space" style="height: 20px">
                                             <span class="vc_empty_space_inner"></span>

@@ -24,7 +24,7 @@
 	    	<div class="row">
 		    	<div class="col-md-12">
 		    		<div class="breadcrumbs text-center">
-		    			<h1>News</h1>
+		    			<h1>{{ __('locale.menu.news') }}</h1>
 		    			<h4></h4>
 		    		</div>
 		    	</div>

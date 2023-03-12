@@ -31,7 +31,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <ul id="breadcrumbs" class="breadcrumbs">
                         <li class="item-cat item-custom-post-type-product">
-                            <a class="bread-cat bread-custom-post-type-product" href="/products" title="Products">Products</a>
+                            <a class="bread-cat bread-custom-post-type-product" href="/products" title="{{ __('locale.menu.products') }}">{{ __('locale.menu.products') }}</a>
                         </li>
                         <li class="separator"></li>
                         <li class="item-current item-archive">
@@ -50,7 +50,7 @@
                     <div class="sidebar">
                         <div id="nav_menu-3" class="widget single-sidebar widget_nav_menu">
                             <div class="sec-title text-left">
-                                <h3>PRODUCT CATEGORIES</h3>
+                                <h3>{{ __('locale.products.product-categories') }}</h3>
                                 <span class="decor"></span>
                             </div>
                             <div class="menu-product-categories-menu-container">

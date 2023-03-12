@@ -1,6 +1,10 @@
 @extends('site.layouts.home')
 
 @section('main')
+<?php
+    $lang = \App::getLocale();
+    $config = Config::get_config($lang);
+?>
 @include('site.products.products-css')
 <div class="page-wrapper">
     @include('site.includes.header')
@@ -9,7 +13,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="breadcrumbs text-center">
-                        <h1>Products</h1>
+                        <h1>{{ __('locale.menu.products') }}</h1>
                         <h4></h4>
                     </div>
                 </div>
@@ -28,8 +32,7 @@
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards,</p>
-                                                <p>Here are some products we have to offer.</p>
+                                                <p>{!! $config['product_content'] !!}</p>
                                             </div>
                                         </div>
                                         <div class="vc_empty_space" style="height: 40px">

@@ -53,5 +53,17 @@
 				</span>
 			</label>
         </div>
+        <div class="form-group">
+            <label for="language" class="control-label">Ngôn ngữ</label>
+            <select class="form-control selectpicker" name="language" id="language" data-live-search="true" data-bind="value: current().language">
+            @foreach($languages as $lang)
+                <option value="{{ $lang->code }}">{{ $lang->name }}</option>
+            @endforeach
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="order" class="control-label">Sắp xếp</label>
+            <input type="number" class="form-control" name="order" id="order" data-bind="value: current().order" placeholder="Sắp xếp..." min="0" />
+        </div>
     </div>
 </div>

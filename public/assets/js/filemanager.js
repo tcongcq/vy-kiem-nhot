@@ -7623,6 +7623,7 @@ ko.components.register("filemanager", {
             }
         }
         c.chooseItem = function(ids) {
+        	if (typeof ids == 'object') ids = [ids];
         	let paths 	 = ids.map(e => e.path);
         	let res_path = paths.length == 1 ? paths[0] : JSON.stringify(paths);
         	switch (h.type) {

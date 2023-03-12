@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App;
+use App\Models\ContactInfo;
 
 class HomepageController extends Controller
 {   
@@ -19,7 +19,13 @@ class HomepageController extends Controller
     }
 
     public function getContactUs(){
-        return view('site.contact-us.contact-us');
+        $lang = \App::getLocale();
+        $contact_infos = ContactInfo::where('language', $lang)
+                                    ->orderBy('order')
+                                    ->get();
+        return view('site.contact-us.contact-us', [
+            'contact_infos' => $contact_infos
+        ]);
     }
 
     /**
@@ -30,7 +36,7 @@ class HomepageController extends Controller
     */
     public function changeLang(Request $request)
     {
-        App::setLocale($request->lang);
+        \App::setLocale($request->lang);
         session()->put('locale', $request->lang);
   
         return redirect()->back();

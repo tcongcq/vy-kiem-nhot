@@ -34,4 +34,8 @@ class Product extends Model
         'language' => '',
     ];
 
+    public function product_category(){
+        return $this->belongsTo(ProductCategory::class);
+    }
+
 }

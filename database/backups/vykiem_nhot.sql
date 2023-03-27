@@ -11,7 +11,7 @@
  Target Server Version : 80030 (8.0.30)
  File Encoding         : 65001
 
- Date: 13/03/2023 02:18:02
+ Date: 27/03/2023 12:39:21
 */
 
 SET NAMES utf8mb4;
@@ -23,13 +23,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `account_groups`;
 CREATE TABLE `account_groups` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `group_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `group_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `group_code` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `group_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `note` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of account_groups
@@ -43,11 +43,11 @@ COMMIT;
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `account_info` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `account_info` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `account_info_id` int unsigned NOT NULL,
-  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `remember_token` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `active` tinyint NOT NULL,
   `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `login_backend` tinyint NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE `accounts` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `accounts_username_unique` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of accounts
@@ -73,109 +73,109 @@ COMMIT;
 DROP TABLE IF EXISTS `configs`;
 CREATE TABLE `configs` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attrib` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `attrib` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `value` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of configs
 -- ----------------------------
 BEGIN;
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (1, 'homepage_title_1', 'CONFIG', 'GET FIRST CLASS LUBRICANTS NEAR YOU', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (2, 'homepage_button_1', 'CONFIG', 'CONTACT US', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (3, 'homepage_link_1', 'CONFIG', '/contact-us', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (4, 'homepage_about_us', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (5, 'homepage_about_us_vision', 'CONFIG', '“To make SINOPEC the most preferred lubricant brand whilst being customer centric and reliable.”', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (6, 'homepage_about_us_mission', 'CONFIG', '“To provide quality lubricants to the entire industry whilst creating a sustainable market.”', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (7, 'homepage_about_us_link', 'CONFIG', '/about-us', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (8, 'homepage_product_quantity', 'CONFIG', '9', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (9, 'show_contact', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (10, 'show_contact_pos', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (11, 'show_contact_email', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (12, 'show_contact_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (13, 'show_contact_form', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (14, 'contact_form_title', 'CONFIG', 'GET IN TOUCH', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (15, 'contact_form_description', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (16, 'about_us_vision', 'CONFIG', '“TO MAKE SINOPEC THE MOST PREFERRED LUBRICANT BRAND WHILST BEING CUSTOMER CENTRIC AND RELIABLE.”', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (17, 'about_us_mission', 'CONFIG', '“TO PROVIDE QUALITY LUBRICANTS TO THE ENTIRE INDUSTRY WHILST CREATING A SUSTAINABLE MARKET.”', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (18, 'about_us_content', 'CONFIG', '<p><strong>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.</strong></p>\n\n<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards. China Petroleum & Chemical Corporation (“Sinopec Corp”) is one of the largest integrated Energy and Chemical Companies in China. The scope of its business mainly covers oil and gas exploration, extraction and production, pipeline transmission, oil refining, marketing, storage and transportation of petrochemicals, chemical fibers, chemical fertilizers and other products. It also exports/imports crude oil, natural gases, refined oil products, petrochemicals, chemicals and other commodities and is focused on research, development and advanced technologies. Sinopec Corp was placed at No. 3 in 2017, on the world ranking in Global Fortune 500 Companies.</p>\n\n<p>Sinopec Lubricants are meeting ISO 9001, ISO/TSI6949, ISO 14001, OSHAS 18000 and AS 9100 standards and blended to API/ACEA/OEM /DIN/HSE/JASO/ACEA standards and maintains Kaizen and Total Quality Management System.</p>', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (19, 'show_product_share', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (20, 'product_content', 'CONFIG', '<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards,</p>\n<p>Here are some products we have to offer.</p>', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (21, 'show_header_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (22, 'header_phone_title', 'CONFIG', 'Customer Support', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (23, 'header_phone', 'CONFIG', '+94 11 434 3747', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:43');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (24, 'show_header_email', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (25, 'header_email_title', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (26, 'header_email', 'CONFIG', 'info@interocean.lk', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (27, 'show_footer_address', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (28, 'footer_address_title', 'CONFIG', 'Address', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (29, 'footer_phone', 'CONFIG', '+94 11 434 3747', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (30, 'show_footer_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (31, 'footer_phone_title', 'CONFIG', 'Call Us', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (32, 'show_footer_email', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (33, 'footer_email_title', 'CONFIG', 'Ask Anything Here', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (34, 'footer_email', 'CONFIG', 'info@interocean.lk', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (35, 'footer_introduce', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore.', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (36, 'footer_maps', 'CONFIG', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1821428876633!2d79.88829031431825!3d6.987800594952018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f7d947dc8c25%3A0xf9b22c8a71fc3680!2sInterocean+Lubricants+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1535973459356', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (37, 'banner_homepage_1', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (38, 'banner_homepage_2', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (39, 'banner_homepage_3', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (40, 'banner_contact_us', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (41, 'banner_about_us', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (42, 'banner_product', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (43, 'header_logo', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (44, 'footer_logo', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-12 18:23:44');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (45, 'homepage_title_1', 'CONFIG', 'GET FIRST CLASS LUBRICANTS NEAR YOU', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (46, 'homepage_button_1', 'CONFIG', 'CONTACT US', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (47, 'homepage_link_1', 'CONFIG', '/contact-us', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (48, 'homepage_about_us', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (49, 'homepage_about_us_vision', 'CONFIG', '“To make SINOPEC the most preferred lubricant brand whilst being customer centric and reliable.”', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (50, 'homepage_about_us_mission', 'CONFIG', '“To provide quality lubricants to the entire industry whilst creating a sustainable market.”', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (51, 'homepage_about_us_link', 'CONFIG', '/about-us', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (52, 'homepage_product_quantity', 'CONFIG', '9', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (53, 'show_contact', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (54, 'show_contact_pos', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (55, 'show_contact_email', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (56, 'show_contact_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (57, 'show_contact_form', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (58, 'contact_form_title', 'CONFIG', 'Thông tin liên hệ', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (59, 'contact_form_description', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. được thành lập vào năm 2008 đóng vai trò là Nhà phân phối độc quyền cho Sinopec tại Việt Nam.', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (60, 'about_us_vision', 'CONFIG', '“TO MAKE SINOPEC THE MOST PREFERRED LUBRICANT BRAND WHILST BEING CUSTOMER CENTRIC AND RELIABLE.”', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (61, 'about_us_mission', 'CONFIG', '“TO PROVIDE QUALITY LUBRICANTS TO THE ENTIRE INDUSTRY WHILST CREATING A SUSTAINABLE MARKET.”', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (62, 'about_us_content', 'CONFIG', '<p><strong>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.</strong></p>\n\n<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards. China Petroleum & Chemical Corporation (“Sinopec Corp”) is one of the largest integrated Energy and Chemical Companies in China. The scope of its business mainly covers oil and gas exploration, extraction and production, pipeline transmission, oil refining, marketing, storage and transportation of petrochemicals, chemical fibers, chemical fertilizers and other products. It also exports/imports crude oil, natural gases, refined oil products, petrochemicals, chemicals and other commodities and is focused on research, development and advanced technologies. Sinopec Corp was placed at No. 3 in 2017, on the world ranking in Global Fortune 500 Companies.</p>\n\n<p>Sinopec Lubricants are meeting ISO 9001, ISO/TSI6949, ISO 14001, OSHAS 18000 and AS 9100 standards and blended to API/ACEA/OEM /DIN/HSE/JASO/ACEA standards and maintains Kaizen and Total Quality Management System.</p>', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (63, 'show_product_share', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (64, 'product_content', 'CONFIG', '<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards,</p>\n<p>Here are some products we have to offer.</p>', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (65, 'show_header_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (66, 'header_phone_title', 'CONFIG', 'Customer Support', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (67, 'header_phone', 'CONFIG', '+94 11 434 3747', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (68, 'show_header_email', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (69, 'header_email_title', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (70, 'header_email', 'CONFIG', 'info@interocean.lk', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (71, 'show_footer_address', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (72, 'footer_address_title', 'CONFIG', 'Địa chỉ', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (73, 'footer_phone', 'CONFIG', '+94 11 434 3747', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (74, 'show_footer_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (75, 'footer_phone_title', 'CONFIG', 'Hoặc gọi', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (76, 'show_footer_email', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (77, 'footer_email_title', 'CONFIG', 'Email cho chúng tôi', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (78, 'footer_email', 'CONFIG', 'info@interocean.lk', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (79, 'footer_introduce', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore.', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (80, 'footer_maps', 'CONFIG', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1821428876633!2d79.88829031431825!3d6.987800594952018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f7d947dc8c25%3A0xf9b22c8a71fc3680!2sInterocean+Lubricants+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1535973459356', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (81, 'banner_homepage_1', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (82, 'banner_homepage_2', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (83, 'banner_homepage_3', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (84, 'banner_contact_us', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (85, 'banner_about_us', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (86, 'banner_product', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (87, 'header_logo', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (88, 'footer_logo', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (89, 'footer_address', 'CONFIG', '371, Negombo Road, Wattala 11300, Sri Lanka', 'vi', '2023-03-12 18:19:20', '2023-03-12 19:11:27');
-INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (90, 'footer_address', 'CONFIG', '371, Negombo Road, Wattala 11300, Sri Lanka', 'en', '2023-03-12 18:19:35', '2023-03-12 18:23:44');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (1, 'homepage_title_1', 'CONFIG', 'GET FIRST CLASS LUBRICANTS NEAR YOU', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (2, 'homepage_button_1', 'CONFIG', 'CONTACT US', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (3, 'homepage_link_1', 'CONFIG', '/contact-us', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (4, 'homepage_about_us', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (5, 'homepage_about_us_vision', 'CONFIG', '“To make SINOPEC the most preferred lubricant brand whilst being customer centric and reliable.”', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (6, 'homepage_about_us_mission', 'CONFIG', '“To provide quality lubricants to the entire industry whilst creating a sustainable market.”', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (7, 'homepage_about_us_link', 'CONFIG', '/about-us', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (8, 'homepage_product_quantity', 'CONFIG', '9', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (9, 'show_contact', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (10, 'show_contact_pos', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (11, 'show_contact_email', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (12, 'show_contact_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (13, 'show_contact_form', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (14, 'contact_form_title', 'CONFIG', 'GET IN TOUCH', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (15, 'contact_form_description', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (16, 'about_us_vision', 'CONFIG', '“TO MAKE SINOPEC THE MOST PREFERRED LUBRICANT BRAND WHILST BEING CUSTOMER CENTRIC AND RELIABLE.”', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (17, 'about_us_mission', 'CONFIG', '“TO PROVIDE QUALITY LUBRICANTS TO THE ENTIRE INDUSTRY WHILST CREATING A SUSTAINABLE MARKET.”', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (18, 'about_us_content', 'CONFIG', '<p><strong>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.</strong></p>\n\n<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards. China Petroleum & Chemical Corporation (“Sinopec Corp”) is one of the largest integrated Energy and Chemical Companies in China. The scope of its business mainly covers oil and gas exploration, extraction and production, pipeline transmission, oil refining, marketing, storage and transportation of petrochemicals, chemical fibers, chemical fertilizers and other products. It also exports/imports crude oil, natural gases, refined oil products, petrochemicals, chemicals and other commodities and is focused on research, development and advanced technologies. Sinopec Corp was placed at No. 3 in 2017, on the world ranking in Global Fortune 500 Companies.</p>\n\n<p>Sinopec Lubricants are meeting ISO 9001, ISO/TSI6949, ISO 14001, OSHAS 18000 and AS 9100 standards and blended to API/ACEA/OEM /DIN/HSE/JASO/ACEA standards and maintains Kaizen and Total Quality Management System.</p>', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (19, 'show_product_share', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (20, 'product_content', 'CONFIG', '<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards,</p>\n<p>Here are some products we have to offer.</p>', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (21, 'show_header_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (22, 'header_phone_title', 'CONFIG', 'Customer Support', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (23, 'header_phone', 'CONFIG', '+84 932 898 498', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (24, 'show_header_email', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (25, 'header_email_title', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (26, 'header_email', 'CONFIG', 'info@interocean.lk', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (27, 'show_footer_address', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (28, 'footer_address_title', 'CONFIG', 'Showroom', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (29, 'footer_phone', 'CONFIG', '+84 932 898 498', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (30, 'show_footer_phone', 'CONFIG', '1', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (31, 'footer_phone_title', 'CONFIG', 'Hotline', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (32, 'show_footer_email', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:51');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (33, 'footer_email_title', 'CONFIG', 'Contact US', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (34, 'footer_email', 'CONFIG', 'info@interocean.lk', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (35, 'footer_introduce', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore.', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (36, 'footer_maps', 'CONFIG', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1821428876633!2d79.88829031431825!3d6.987800594952018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f7d947dc8c25%3A0xf9b22c8a71fc3680!2sInterocean+Lubricants+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1535973459356', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (37, 'banner_homepage_1', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (38, 'banner_homepage_2', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (39, 'banner_homepage_3', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (40, 'banner_contact_us', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (41, 'banner_about_us', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (42, 'banner_product', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (43, 'header_logo', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (44, 'footer_logo', 'CONFIG', '', 'en', '2023-02-18 17:46:57', '2023-03-13 12:30:52');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (45, 'homepage_title_1', 'CONFIG', 'GET FIRST CLASS LUBRICANTS NEAR YOU', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (46, 'homepage_button_1', 'CONFIG', 'CONTACT US', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (47, 'homepage_link_1', 'CONFIG', '/contact-us', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (48, 'homepage_about_us', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (49, 'homepage_about_us_vision', 'CONFIG', '“To make SINOPEC the most preferred lubricant brand whilst being customer centric and reliable.”', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (50, 'homepage_about_us_mission', 'CONFIG', '“To provide quality lubricants to the entire industry whilst creating a sustainable market.”', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (51, 'homepage_about_us_link', 'CONFIG', '/about-us', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (52, 'homepage_product_quantity', 'CONFIG', '9', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (53, 'show_contact', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (54, 'show_contact_pos', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (55, 'show_contact_email', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (56, 'show_contact_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (57, 'show_contact_form', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (58, 'contact_form_title', 'CONFIG', 'Thông tin liên hệ', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (59, 'contact_form_description', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. được thành lập vào năm 2008 đóng vai trò là Nhà phân phối độc quyền cho Sinopec tại Việt Nam.', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (60, 'about_us_vision', 'CONFIG', '“TO MAKE SINOPEC THE MOST PREFERRED LUBRICANT BRAND WHILST BEING CUSTOMER CENTRIC AND RELIABLE.”', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (61, 'about_us_mission', 'CONFIG', '“TO PROVIDE QUALITY LUBRICANTS TO THE ENTIRE INDUSTRY WHILST CREATING A SUSTAINABLE MARKET.”', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (62, 'about_us_content', 'CONFIG', '<p><strong>Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore. Product portfolio consists of engine oils, gear oils, hydraulic oils, greases, synthetic technology oils, automatic transmission oils and marine oils which are widely applied in many industries.</strong></p>\n\n<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards. China Petroleum & Chemical Corporation (“Sinopec Corp”) is one of the largest integrated Energy and Chemical Companies in China. The scope of its business mainly covers oil and gas exploration, extraction and production, pipeline transmission, oil refining, marketing, storage and transportation of petrochemicals, chemical fibers, chemical fertilizers and other products. It also exports/imports crude oil, natural gases, refined oil products, petrochemicals, chemicals and other commodities and is focused on research, development and advanced technologies. Sinopec Corp was placed at No. 3 in 2017, on the world ranking in Global Fortune 500 Companies.</p>\n\n<p>Sinopec Lubricants are meeting ISO 9001, ISO/TSI6949, ISO 14001, OSHAS 18000 and AS 9100 standards and blended to API/ACEA/OEM /DIN/HSE/JASO/ACEA standards and maintains Kaizen and Total Quality Management System.</p>', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (63, 'show_product_share', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (64, 'product_content', 'CONFIG', '<p>Sinopec is an internationally renowned name in the field of world class lubricants, blended using high quality base oils and employing state of the art technologies. It is noteworthy to mention that Sinopec has produced superior quality lubricants for more than 15 years meeting world class standards,</p>\n<p>Here are some products we have to offer.</p>', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (65, 'show_header_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (66, 'header_phone_title', 'CONFIG', 'Hỗ trợ khách hàng', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (67, 'header_phone', 'CONFIG', '+84 932 898 498', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (68, 'show_header_email', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (69, 'header_email_title', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (70, 'header_email', 'CONFIG', 'info@interocean.lk', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (71, 'show_footer_address', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (72, 'footer_address_title', 'CONFIG', 'Showroom', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (73, 'footer_phone', 'CONFIG', '+84 932 898 498', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (74, 'show_footer_phone', 'CONFIG', '1', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (75, 'footer_phone_title', 'CONFIG', 'Hotline', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (76, 'show_footer_email', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (77, 'footer_email_title', 'CONFIG', 'Liên hệ', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (78, 'footer_email', 'CONFIG', 'info@interocean.lk', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (79, 'footer_introduce', 'CONFIG', 'Interocean Lubricants (Pvt) Ltd. incorporated in 2008 serves as the Sole Distributor for Sinopec in Sri Lanka, making Sinopec Lubricants available locally through more than 1,500 dealer networks across the country. Finished and Packed Sinopec Lubricants are imported from China and Singapore.', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (80, 'footer_maps', 'CONFIG', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1821428876633!2d79.88829031431825!3d6.987800594952018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f7d947dc8c25%3A0xf9b22c8a71fc3680!2sInterocean+Lubricants+(Pvt)+Ltd!5e0!3m2!1sen!2slk!4v1535973459356', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (81, 'banner_homepage_1', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (82, 'banner_homepage_2', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (83, 'banner_homepage_3', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (84, 'banner_contact_us', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (85, 'banner_about_us', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (86, 'banner_product', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (87, 'header_logo', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (88, 'footer_logo', 'CONFIG', '', 'vi', '2023-02-18 17:47:01', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (89, 'footer_address', 'CONFIG', 'Quốc lộ 1A, khu vực 2<br/> phường Ba Láng, quận Cái Răng, TP. Cần Thơ', 'vi', '2023-03-12 18:19:20', '2023-03-13 12:31:01');
+INSERT INTO `configs` (`id`, `code`, `attrib`, `value`, `language`, `created_at`, `updated_at`) VALUES (90, 'footer_address', 'CONFIG', 'National Highway 1A, area 2<br/> Ba Lang ward, Cai Rang district, Can Tho City', 'en', '2023-03-12 18:19:35', '2023-03-13 12:30:51');
 COMMIT;
 
 -- ----------------------------
@@ -184,18 +184,18 @@ COMMIT;
 DROP TABLE IF EXISTS `contact_infos`;
 CREATE TABLE `contact_infos` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `contact_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_name` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `contact_email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `contact_phone` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `order` tinyint NOT NULL DEFAULT '0',
-  `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `position` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `is_show` tinyint DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of contact_infos
@@ -217,16 +217,16 @@ COMMIT;
 DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE `contacts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `contact_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `subject` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `status` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '0',
+  `contact_name` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `contact_email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `contact_phone` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `subject` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `message` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `status` varchar(30) COLLATE utf8mb3_unicode_ci DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of contacts
@@ -240,14 +240,14 @@ COMMIT;
 DROP TABLE IF EXISTS `languages`;
 CREATE TABLE `languages` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `default` tinyint DEFAULT '0',
-  `attribs` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `attribs` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of languages
@@ -264,14 +264,14 @@ DROP TABLE IF EXISTS `permissions`;
 CREATE TABLE `permissions` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `account_group_id` int unsigned NOT NULL,
-  `permission_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `permission_code` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `value` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   KEY `permissions_account_group_id_foreign` (`account_group_id`),
   CONSTRAINT `permissions_account_group_id_foreign` FOREIGN KEY (`account_group_id`) REFERENCES `account_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of permissions
@@ -285,18 +285,18 @@ COMMIT;
 DROP TABLE IF EXISTS `post_categories`;
 CREATE TABLE `post_categories` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `alias` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `alias` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `is_show` tinyint NOT NULL DEFAULT '1',
   `order_num` int NOT NULL DEFAULT '999',
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `note` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of post_categories
@@ -317,22 +317,22 @@ COMMIT;
 DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `alias` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `introduce` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `content` text COLLATE utf8mb4_unicode_ci,
+  `alias` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `introduce` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `content` text COLLATE utf8mb3_unicode_ci,
   `post_category_id` int unsigned DEFAULT '1',
   `is_show` tinyint DEFAULT '0',
   `order_num` int DEFAULT '999',
   `views` int DEFAULT '0',
-  `attachments` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `tags` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attachments` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `tags` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of posts
@@ -360,18 +360,18 @@ COMMIT;
 DROP TABLE IF EXISTS `product_categories`;
 CREATE TABLE `product_categories` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `alias` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `alias` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `is_show` tinyint NOT NULL DEFAULT '1',
   `order_num` int NOT NULL DEFAULT '999',
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `note` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of product_categories
@@ -406,22 +406,22 @@ COMMIT;
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `alias` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `introduce` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `alias` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `introduce` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `content` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `product_category_id` int unsigned DEFAULT '1',
   `is_show` tinyint DEFAULT '0',
   `order_num` int DEFAULT '999',
   `views` int DEFAULT '0',
-  `attachments` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `tags` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `language` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attachments` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `tags` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `language` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of products
@@ -464,7 +464,7 @@ CREATE TABLE `roles` (
   KEY `roles_account_group_id_foreign` (`account_group_id`),
   CONSTRAINT `roles_account_group_id_foreign` FOREIGN KEY (`account_group_id`) REFERENCES `account_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `roles_account_id_foreign` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of roles
@@ -478,14 +478,14 @@ COMMIT;
 DROP TABLE IF EXISTS `systems`;
 CREATE TABLE `systems` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attrib` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `code` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `attrib` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `value` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `systems_attrib_unique` (`attrib`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of systems
@@ -499,17 +499,17 @@ COMMIT;
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `profile_pic` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `fullname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gender` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `profile_pic` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `fullname` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `gender` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `note` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- ----------------------------
 -- Records of users

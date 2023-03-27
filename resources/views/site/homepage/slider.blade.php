@@ -48,8 +48,8 @@
                     >
                     <div class="div-discover" style="color: #f1e1ac;">
                         <h1 style="color: #f1e1ac;">PREMIUM OIL</h1>
-                        <h2>GIẢI PHÁP DẦU NHỜN TOÀN DIỆN</h2>
-                        <h5>CHẤT LƯỢNG CAO VỚI CHI PHÍ TỐT NHẤT</h5>
+                        <h2 style="font-family: 'Open Sans';">GIẢI PHÁP DẦU NHỜN TOÀN DIỆN</h2>
+                        <h5 style="font-family: 'Open Sans';">CHẤT LƯỢNG CAO VỚI CHI PHÍ TỐT NHẤT</h5>
                         <a href="/products" class="btn-discover">KHÁM PHÁ NGAY</a>
                     </div>
                 </div>

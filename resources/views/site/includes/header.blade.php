@@ -22,7 +22,7 @@
     }
 }
 .lang-group .lang-name{
-    color: #474747;
+    color: #fff;
     cursor: pointer;
     user-select: none;
 }
@@ -36,6 +36,19 @@
 .lang-group .dropdown-menu>.active>a, .lang-group .dropdown-menu>.active>a:focus, .lang-group .dropdown-menu>.active>a:hover{
     background: #e2001a !important;
 }
+.header-top .header-top-content {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+.header-lower.navbar .container {
+    border-top: 0px;
+}
+.main-header.stricky:not(.stricky-fixed) {
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 100%) !important;
+}
+.header-contact-info ul li, .header-contact-info a {
+    color: #fff;
+}
 </style>
 <script type="text/javascript">
 function change_lang(lang){
@@ -43,6 +56,10 @@ function change_lang(lang){
         window.location.replace("{{ url('lang/change?lang=') }}"+lang);
 }
 </script>
+<?php
+    $lang = \App::getLocale();
+    $config = Config::get_config($lang);
+?>
 <header class="main-header stricky">
     <div class="header-top">
         <div class="container">
@@ -51,13 +68,17 @@ function change_lang(lang){
                     <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
                         <div class="header-contact-info">
                             <ul>
+                                @if($config['show_header_phone'])
                                 <li>
-                                    <i class="flaticon-telephone"></i> Customer Support <a href="tel:+94114343747">+94 11 434 3747</a>
+                                    <i class="flaticon-telephone"></i> {!! $config['header_phone_title'] !!} <a href="tel:{{ preg_replace('/\s+/', '', $config['header_phone']) }}">{!! $config['header_phone'] !!}</a>
                                 </li>
+                                @endif
+                                @if($config['show_header_email'])
                                 <li>
-                                    <i class="flaticon-interface-1"></i>
-                                    <a href="mailto:info@interocean.lk">info@interocean.lk</a>
+                                    <i class="flaticon-interface-1">{!! $config['header_email_title'] !!}</i>
+                                    <a href="mailto:info@interocean.lk">{!! $config['header_email'] !!}</a>
                                 </li>
+                                @endif
                             </ul>
                         </div>
                     </div>

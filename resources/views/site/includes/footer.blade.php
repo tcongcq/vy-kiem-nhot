@@ -12,7 +12,7 @@
                     </div>
                     <div class="text">
                         <p>
-                            {{ $config['footer_introduce'] }}
+                            {!! $config['footer_introduce'] !!}
                         </p>
                     </div>
                 </div>
@@ -27,34 +27,51 @@
                 <div id="custom_html-3" class="widget_text col-lg-4 col-md-4 col-sm-6 col-xs-12 single-footer-widget footer-widget widget_custom_html">
                     <div class="textwidget custom-html-widget">
                         <ul class="contact-info">
+                            @if($config['show_footer_address'])
                             <li class="address">
                                 <div class="icon-holder">
                                     <span class="flaticon-map"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>{{ $config['footer_address_title'] }}</h4>
-                                    <p>{{ $config['footer_address'] }}</p>
+                                    <h4>{!! $config['footer_address_title'] !!}</h4>
+                                    <p>{!! $config['footer_address'] !!}</p>
                                 </div>
                             </li>
+                            @endif
+                            @if($config['show_footer_email'])
                             <li class="email">
                                 <div class="icon-holder">
                                     <span class="flaticon-note"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>{{ $config['footer_email_title'] }}</h4>
+                                    <h4>{!! $config['footer_email_title'] !!}</h4>
                                     <p>
-                                        <a href="mailto:{{ $config['footer_email'] }}">{{ $config['footer_email'] }}</a>
+                                        <a href="mailto:{{ $config['footer_email'] }}">{!! $config['footer_email'] !!}</a>
                                     </p>
                                 </div>
                             </li>
+                            @endif
+                            @if($config['show_footer_phone'])
                             <li>
                                 <div class="icon-holder">
                                     <span class="flaticon-telephone"></span>
                                 </div>
                                 <div class="content">
-                                    <h4>{{ $config['footer_phone_title'] }}</h4>
+                                    <h4>{!! $config['footer_phone_title'] !!}</h4>
                                     <p>
-                                        <a href="tel:{{ preg_replace('/\s+/', '', $config['footer_phone']) }}">{{ $config['footer_phone'] }}</a>
+                                        <a href="tel:{{ preg_replace('/\s+/', '', $config['footer_phone']) }}">{!! $config['footer_phone'] !!}</a>
+                                    </p>
+                                </div>
+                            </li>
+                            @endif
+                            <li hidden>
+                                <div class="icon-holder">
+                                    <span class="flaticon-social-1"></span>
+                                </div>
+                                <div class="content">
+                                    <h4>Fanpage</h4>
+                                    <p>
+                                        <a href="#">Facebook Page</a> / <a href="#">Tiktok Channel</a>
                                     </p>
                                 </div>
                             </li>
@@ -74,7 +91,7 @@
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="copy-right">
-                        <p style="margin-bottom: 0px;">Assembled by <a href="/">Sinopec VN</a></p>
+                        <p style="margin-bottom: 0px;">Assembled by <a href="/">Jigsaw Ensemble</a></p>
                     </div>
                 </div>
             </div>

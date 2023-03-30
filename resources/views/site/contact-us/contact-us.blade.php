@@ -95,7 +95,7 @@
 	                                            </div>
 	                                            <div class="content">
 	                                                <h4>{{ $config['footer_address_title'] }}</h4>
-	                                                <p>{{ $config['footer_address'] }}</p>
+	                                                <p>{!! $config['footer_address'] !!}</p>
 	                                            </div>
 	                                        </li>
 	                                        <li>
@@ -104,7 +104,7 @@
 	                                            </div>
 	                                            <div class="content">
 	                                                <h4>{{ $config['footer_email_title'] }}</h4>
-	                                                <p>{{ $config['footer_email'] }}</p>
+	                                                <p>{!! $config['footer_email'] !!}</p>
 	                                            </div>
 	                                        </li>
 	                                        <li>
@@ -113,7 +113,7 @@
 	                                            </div>
 	                                            <div class="content">
 	                                                <h4>{{ $config['footer_phone_title'] }}</h4>
-	                                                <p>{{ $config['footer_phone'] }}</p>
+	                                                <p>{!! $config['footer_phone'] !!}</p>
 	                                            </div>
 	                                        </li>
 	                                    </ul>

@@ -225,6 +225,3 @@
     </div>
     <div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%; background-image: url(/wp-content/uploads/2018/09/bg-oil-gr-e1543567346854.png;); top: -44.1522%;"></div>
 </div>
-<div style="user-select: none;">
-    <img src="/theme/img/homepage/banner-2.jpg">
-</div>

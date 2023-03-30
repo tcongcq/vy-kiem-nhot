@@ -7,7 +7,10 @@
     @include('site.homepage.slider')
 
     @include('site.homepage.introduce')
+
     @include('site.homepage.our_products')
+    
+    @include('site.homepage.about_us')
     
     @include('site.homepage.recent_products')
 

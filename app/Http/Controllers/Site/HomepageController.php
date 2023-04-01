@@ -28,14 +28,7 @@ class HomepageController extends Controller
         ]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     * ref: https://www.itsolutionstuff.com/post/how-to-create-multilingual-website-in-laravelexample.html
-    */
-    public function changeLang(Request $request)
-    {
+    public function changeLang(Request $request){
         \App::setLocale($request->lang);
         session()->put('locale', $request->lang);
   

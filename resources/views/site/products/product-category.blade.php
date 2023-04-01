@@ -46,26 +46,7 @@
     <section class="shop-section with-sidebar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="sidebar">
-                        <div id="nav_menu-3" class="widget single-sidebar widget_nav_menu">
-                            <div class="sec-title text-left">
-                                <h3>{{ __('locale.products.product-categories') }}</h3>
-                                <span class="decor"></span>
-                            </div>
-                            <div class="menu-product-categories-menu-container">
-                                <ul id="menu-product-categories-menu" class="menu">
-                                    @foreach($products as $cat)
-                                    <li id="menu-item-1022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1022">
-                                        <a href="/product-category/{{ $cat->alias }}">{{ $cat->name }}</a>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-lg-8 ">
+                <div class="col-lg-12">
                     <div class="row meta-info">
                         <div class="col-md-12">
                             <h2>{{ $category->name }}</h2>

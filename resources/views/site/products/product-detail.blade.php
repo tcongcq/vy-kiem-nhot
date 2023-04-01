@@ -35,7 +35,7 @@ product-template-default single single-product postid-2330 theme-autocare woocom
     <section class="shop-section single-shop">
 	    <div class="container">
 	        <div class="row">
-	            <div class=" col-lg-8  single-shop-content">
+	            <div class=" col-lg-12 single-shop-content">
 	                <div class="woocommerce-notices-wrapper"></div>
 	                <div itemscope="" id="product-2330" class="post-2330 product type-product status-publish has-post-thumbnail product_cat-diesel-engine-oil product_cat-sinopec-tulux-t-series grow-content-body first instock shipping-taxable product-type-simple">
 	                    <div class="ac-detail-shop">
@@ -125,6 +125,7 @@ product-template-default single single-product postid-2330 theme-autocare woocom
 	                            </div>
 	                        </div>
 	                    </div>
+	                    @if(count($related_products))
 	                    <div class="related products shop-page-content">
 	                        <div class="sec-title text-left">
 	                            <h1>Related Products</h1>
@@ -159,26 +160,8 @@ product-template-default single single-product postid-2330 theme-autocare woocom
 	                            </div>
 	                        </div>
 	                    </div>
+	                    @endif
 	                    <meta itemprop="url" content="/product/{{ $product->alias }}">
-	                </div>
-	            </div>
-	            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
-	                <div class="sidebar">
-	                    <div id="nav_menu-3" class="widget single-sidebar widget_nav_menu">
-	                        <div class="sec-title text-left">
-	                            <h3>PRODUCT CATEGORIES</h3>
-	                            <span class="decor"></span>
-	                        </div>
-	                        <div class="menu-product-categories-menu-container">
-	                            <ul id="menu-product-categories-menu" class="menu">
-	                                @foreach($product_categories as $cat)
-	                                <li id="menu-item-1027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1027">
-	                                    <a href="/product-category/{{ $cat->alias }}">{{ $cat->name }}</a>
-	                                </li>
-	                                @endforeach
-	                            </ul>
-	                        </div>
-	                    </div>
 	                </div>
 	            </div>
 	        </div>

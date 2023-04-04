@@ -8,7 +8,7 @@
             <div class="row clearfix">
                 <div id="bunch_about_us-2" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 single-footer-widget footer-widget widget_bunch_about_us">
                     <div class="footer-logo">
-                        <img src="{{ url('wp-content/uploads/2018/08/sinopec-logo.png') }}" alt="Awesome Footer Logo">
+                        <img src="{{ url($config['footer_logo']) }}" alt="Awesome Footer Logo">
                     </div>
                     <div class="text">
                         <p>

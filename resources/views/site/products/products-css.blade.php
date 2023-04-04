@@ -90,9 +90,28 @@ a.pcat:hover span.title{
     left: 15px;
 }
 
-a.pcat .title h3 {
+/*a.pcat .title h3 {
     font-size: 12px;
     font-weight: bold;
+}*/
+a.pcat .title h3 {
+    font-size: 15px;
+    font-weight: bold;
+    height: 60px;
+    vertical-align: middle;
+    border-bottom: 4px solid #b90b13;
+    line-height: 2.1;
+}
+.pcat .go-top-icon {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    background-color: #ba0913;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.1;
 }
 
 .breadcrumb-bottom-area{

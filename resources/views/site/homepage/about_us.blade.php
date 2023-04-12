@@ -2,9 +2,6 @@
     $lang = \App::getLocale();
     $config = Config::get_config($lang);
 ?>
-<div style="user-select: none;">
-    <img src="/theme/img/homepage/banner-1.jpg">
-</div>
 <div class="vc_row wpb_row vc_row-fluid vc_custom_1535614439582">
     <div class="container">
         <div class="wpb_column vc_column_container vc_col-sm-12">

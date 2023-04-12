@@ -3,23 +3,27 @@
     $config = Config::get_config($lang);
 ?>
 <style type="text/css">
-    .call-to-action-area .box, .call-to-action-area .box:before, .call-to-action-area .box:after {
-        background-color: #000;
-    }
-    .call-to-action-area{
-        background-image: linear-gradient(to bottom, #1c0b07, #000);
-    }
-    .call-to-action-area .box a{
-        border: 2px solid #000;
-        color: #000;
-    }
-    .call-to-action-area .box a:hover{
-        color: #ba0913;
-    }
+.call-to-action-area .box, .call-to-action-area .box:before, .call-to-action-area .box:after {
+    background-color: #000;
+}
+.call-to-action-area{
+    background-image: linear-gradient(to bottom, #1c0b07, #000);
+}
+.call-to-action-area .box a{
+    border: 2px solid #000;
+    color: #000;
+}
+.call-to-action-area .box a:hover{
+    color: #ba0913;
+}
+
+.call-to-action-area .box:before, .call-to-action-area .box:after{
+    display: none;
+}
 </style>
 <div class="vc_row wpb_row vc_row-fluid">
     <div class="wpb_column vc_column_container vc_col-sm-12">
-        <div class="vc_column-inner">
+        <div class="vc_column-inner" style="background-color: #000;">
             <div class="wpb_wrapper">
                 <section class="call-to-action-area">
                     <div class="container">
@@ -42,4 +46,7 @@
             </div>
         </div>
     </div>
+</div>
+<div style="user-select: none;">
+    <img src="/theme/img/homepage/banner-1.jpg">
 </div>

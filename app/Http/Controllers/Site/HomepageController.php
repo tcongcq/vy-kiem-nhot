@@ -15,7 +15,7 @@ class HomepageController extends Controller
     }
 
     public function getAboutUs(){
-        return view('site.about-us.about-us');
+        return view('site.about-us.about-us-2');
     }
 
     public function getContactUs(){

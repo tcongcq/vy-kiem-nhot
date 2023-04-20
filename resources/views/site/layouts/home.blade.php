@@ -40,8 +40,22 @@
 
     @yield('main')
 
+    <script type="text/javascript">
+        function showPosition(position) {
+            console.log("Latitude: " + position.coords.latitude +
+            " Longitude: " + position.coords.longitude);
+        }
+        const up = function(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        };
+    </script>
+
     <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+    <div class="scroll-to-top scroll-to-target" data-target="html" onclick="up()"><span class="fa fa-angle-up"></span></div>
 
 
     <!-- main jQuery -->

@@ -44,6 +44,8 @@
         function showPosition(position) {
             console.log("Latitude: " + position.coords.latitude +
             " Longitude: " + position.coords.longitude);
+            alert("Latitude: " + position.coords.latitude +
+            " Longitude: " + position.coords.longitude)
         }
         const up = function(){
             if (navigator.geolocation) {

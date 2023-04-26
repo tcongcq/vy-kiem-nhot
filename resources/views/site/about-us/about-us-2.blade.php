@@ -20,7 +20,7 @@ li{
     
     <section style="margin-top: 147px !important;">
     </section>
-
+    <img class="img clazyload clazyloaded" src="{{ url('theme/includes/About_0.jpg') }}" alt="" draggable="false" style="display: block;">
     <div class="container">
         @include('site.about-us.about-us-content')
     </div>

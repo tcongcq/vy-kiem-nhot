@@ -1,31 +1,4 @@
-<section>
-    <div id="panel-9-54e1849a-b6be-432a-b2e6-8258d3f6e7f1" class="cs-panel widget panel-first-child" data-widget-id="54e1849a-b6be-432a-b2e6-8258d3f6e7f1" data-index="0">
-        <div class="cs-widget-clever-element-editor cs-widget-sow-editor-base ">
-            <div class="slider-54e1849a-b6be-432a-b2e6-8258d3f6e7f1 clever-slider-container global-element " style="position: relative; height: 500px;">
-                <div class="clever-slider flexslider" id="clever-slider-643ee4e33cb5e" style="min-height: 200px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; border-width: 0px; height: 500px;">
-                    <div class="flex-viewport" style="overflow: hidden; position: relative; width: 100%;">
-                        <ul class="slides" style="width: 200%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-                            <li id="clever-left-slide-0-slideshow" data-video="clever-slideshow-0-643ee4e33cb64" style="width: 1440px; height: 100%; margin-right: 0px; float: left; display: block;" class="flex-active-slide">
-                                <div id="panel-9-65b9308d-5d00-48ed-be1f-a4ec45ed7da8" class="cs-panel widget panel-first-child panel-last-child" data-widget-id="65b9308d-5d00-48ed-be1f-a4ec45ed7da8" data-index="0">
-                                    <div class="cs-widget-clever-element-editor cs-widget-sow-editor-base ">
-                                        <div class="global-element banner  banner-65b9308d-5d00-48ed-be1f-a4ec45ed7da8 layout-blank has-hover  " data-animated="true">
-                                            <div class="banner-inner">
-                                                <div class="banner-image">
-                                                    <img class="img clazyload clazyloaded" src="{{ url('theme/includes/About_0.jpg') }}" alt="" draggable="false" style="display: block;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="text-center">
+<section class="text-center" style="padding-top: 20px;">
     <div style="font-style: normal;line-height: 30px;letter-spacing: 2px;" class="cleversoft-widget-tinymce textwidget global-element">
         <h2 style="text-transform: none; color:#EF2F25;font-weight:bold;">Premium lubricating oil distributors</h2>
         <p style="text-align: center !important;">ILD and Sinopec have partnered to deliver industry leading grease and lubricant solutions developed for tough Australian conditions.</p>
@@ -48,14 +21,19 @@
                                             <div id="panel-9-a6fd1a7d-dc55-4304-be05-ec509ff53e5e" class="cs-panel widget panel-first-child" data-widget-id="a6fd1a7d-dc55-4304-be05-ec509ff53e5e" data-index="2">
                                                 <div class="cs-widget-clever-editor cs-widget-sow-editor-base ">
                                                     <div style="text-transform: initial;font-style: normal;line-height: 30px;letter-spacing: 2px;" class="cleversoft-widget-tinymce textwidget global-element">
-                                                        <h3 style="font-weight: bold;">SINOPEC: Industry Leaders in premium lubricants</h3>
+                                                        <h3 style="font-weight: bold;">SINOPEC: DẪN ĐẦU NGÀNH DẦU BÔI TRƠN CAO CẤP</h3>
                                                         <p>
                                                             <br>
-                                                            <br>
                                                         </p>
-                                                        <p class="p1">The Sinopec Group is the world’s second-largest oil refiner and fourth largest lubricants company. Its quality products have been keeping industries turning for years. From fully synthetic engine oils to steam turbine lubricants. There is no doubting Sinopec’s technical expertise and performance credentials. They have proven themselves time and time again with quality. <br>
-                                                            <br> Producing over seven hundred variants of oils and greases for every application imaginable. Sinopec’s premium lubricants have caught the attention of businesses. The type of business who seek products that provide outstanding performance every time. <br>
-                                                            <br> With Sinopec, you’re in safe hands.
+                                                        <p class="p1">
+                                                            Tập đoàn Sinopec là công ty lọc dầu lớn thứ hai thế giới và công ty dầu nhờn lớn thứ tư. Các sản phẩm chất lượng của nó đã giữ cho các ngành công nghiệp phát triển trong nhiều năm. Từ dầu động cơ tổng hợp hoàn toàn đến dầu bôi trơn tua-bin hơi nước.
+                                                            <br>
+                                                            <br>
+                                                            Sinopec tự tin dẫn đầu về chuyên môn kỹ thuật ngành dầu hơn trên Thế Giới, sản xuất hơn bảy trăm loại dầu và mỡ bôi trơn để phục vụ cho mọi yêu cầu & ứng dụng sản xuất đa ngành nghề.
+                                                            <br>
+                                                            <br>
+                                                            Dầu nhờn cao cấp của Sinopec đã gây được sự chú ý của các doanh nghiệp, sản phẩm sinopec luôn được tìm kiếm và lựa chọn để mang lại hiệu suất vượt trội.
+
                                                         </p>
                                                     </div>
                                                 </div>
@@ -120,11 +98,16 @@
                                             <div id="panel-9-7c877a59-1a47-4632-89f4-c82808348408" class="cs-panel widget panel-last-child" data-widget-id="7c877a59-1a47-4632-89f4-c82808348408" data-index="3">
                                                 <div class="cs-widget-clever-editor cs-widget-sow-editor-base ">
                                                     <div style="text-transform: initial;font-style: normal;line-height: 30px;letter-spacing: 2px;" class="cleversoft-widget-tinymce textwidget global-element">
-                                                        <h3 style="font-weight:bold;">SINOPEC: PREMIUM QUALITY WITHOUT COMPROMISE</h3>
+                                                        <h3 style="font-weight:bold;">SINOPEC: CHẤT LƯỢNG CAO CẤP KHÔNG THỎA MÃN</h3>
                                                         <br>
-                                                        <br>
-                                                        <p class="p1"> Sinopec provides world-leading premium lubricants and greases from their state-of-the-art plant in Singapore. This is a premium quality product that surpasses all international OEM and Accreditation Authority specifications. <br>
-                                                            <br> We offer a full range of Premium Lubricants and Greases across all of the major industry sectors. This includes Mining and Earthmoving, Car and Motorcycle, Agriculture, Construction, Truck and Bus and Marine.
+                                                        <p class="p1">
+                                                            Sinopec cung cấp dầu nhờn và mỡ bôi trơn cao cấp hàng đầu thế giới, được sản xuất và nhập khẩu trực tiếp từ nhà máy tại Singapore.
+                                                            <br>
+                                                            <br>
+                                                            Tất cả sản phẩm đều qua kiểm định chất lượng và phù hợp với mọi tiêu chuẩn kỹ thuật quốc tế của OEM và Cơ quan công nhận.
+                                                            <br>
+                                                            <br>
+                                                            Sinopec cung cấp đầy đủ các loại Mỡ bôi trơn cao cấp trên tất cả các lĩnh vực công nghiệp chính, bao gồm: Khai thác và Vận chuyển đất, Ô tô và Xe máy, Nông nghiệp, Xây dựng, Xe tải và Xe buýt và Hàng hải.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -148,20 +131,28 @@
                                             <div id="panel-9-a1380353-9bcb-4f13-a001-cc19ea4d9c0b" class="cs-panel widget panel-first-child" data-widget-id="a1380353-9bcb-4f13-a001-cc19ea4d9c0b" data-index="4">
                                                 <div class="cs-widget-clever-editor cs-widget-sow-editor-base ">
                                                     <div style="text-transform: initial;font-style: normal;line-height: 30px;letter-spacing: 2px;" class="cleversoft-widget-tinymce textwidget global-element">
-                                                        <h3 style="font-weight: bold;">THE ILD DIFFERENCE</h3>
+                                                        <h3 style="font-weight: bold;">CHUNG TAY VÌ MÔI TRƯỜNG</h3>
                                                         <p>
                                                             <br>
-                                                            <br>
                                                         </p>
-                                                        <p class="p1">With us, you can expect a quality product, tailored experience and exceptional service. We’re committed to our customers. We’re here to keep your world running smoothly. The ILD Guarantee:</p>
+                                                        <p class="p1">
+                                                            Sinopec đã thiết lập các tiêu chuẩn về Hệ thống quản lý an toàn, môi trường và sức khỏe nghề nghiệp để bảo vệ công ty và các bên liên quan bao gồm khách hàng, nhà thầu và đối tác nhằm quản lý an toàn, bảo vệ môi trường và sức khỏe nghề nghiệp.
+                                                            <br/>
+                                                            <br/>
+                                                            Trụ sở chính và tất cả các công ty con thành lập bộ phận quản lý HSE để quản lý các hoạt động về tiết kiệm năng lượng, giảm phát thải, phát thải khí nhà kính, bảo vệ môi trường, tiết kiệm nước, sử dụng tích hợp năng lượng và sản xuất sạch.
+                                                            <br/>
+                                                            <br/>
+                                                            Các công ty con thiết lập các quy định HSE và giám sát các hoạt động liên quan tuân thủ luật pháp và quy định của Trung Quốc và địa phương.
+                                                            <br/>
+                                                            <br/>
+                                                            Lựa chọn chúng tôi, bạn hoàn toàn có thể mong đợi một sản phẩm chất lượng, trải nghiệm phù hợp và dịch vụ đặc biệt. Chúng tôi cam kết với khách hàng của mình. Sinopec ở đây để giữ cho hệ thống sản xuất của bạn hoạt động trơn tru. Bảo đảm của ILD:
+                                                            <br/>
+                                                        </p>
                                                         <ul class="p1" style="margin-left: 30px;">
-                                                            <li>Swift lubricant supply anywhere in Australia</li>
-                                                            <li>Premium lubricants made by one of the world’s largest and most respected companies</li>
-                                                            <li>Unparalleled levels of responsive and flexible customer service</li>
-                                                            <li>Competitive pricing</li>
-                                                            <li>A senior management team with extensive industry knowledge and a</li>
-                                                            <li>genuine focus on customers</li>
-                                                            <li>Access to technical application specialists</li>
+                                                            <li>Chất bôi trơn cao cấp được sản xuất bởi một trong những công ty lớn nhất và uy tín nhất thế giới</li>
+                                                            <li>Cung cấp đa dạng tất cả dòng sản phẩm dầu nhờn và phụ gia bôi trơn.</li>
+                                                            <li>Sản phẩm cao cấp với giá thành phải chăng</li>
+                                                            <li>Một đội ngũ chuyên gia nghiên cứu cấp cao có kiến thức sâu rộng về ngành</li>
                                                         </ul>
                                                     </div>
                                                 </div>

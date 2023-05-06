@@ -33,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', '\App\Http\Controllers\Site\HomepageController@getHomepage')->name('site.homepage');
     Route::get('/about-us', '\App\Http\Controllers\Site\HomepageController@getAboutUs')->name('site.about-us');
     Route::get('/contact-us', '\App\Http\Controllers\Site\HomepageController@getContactUs')->name('site.contact-us');
+    Route::post('/contact-us', '\App\Http\Controllers\Site\HomepageController@postContactUs')->name('site.post-contact-us');
     Route::get('/news', '\App\Http\Controllers\Site\PostController@getNews')->name('site.news');
     Route::get('/news/{alias}', '\App\Http\Controllers\Site\PostController@getPostDetail')->name('site.post-detail');
     Route::get('/category/{alias}', '\App\Http\Controllers\Site\PostController@getCategoryDetail')->name('site.category-detail');

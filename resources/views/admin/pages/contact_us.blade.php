@@ -32,7 +32,7 @@ function ToolBar() {
     };
 
     self.prepare_save = function(){
-    	self.form_data.current().has_complete        = self.form_data.current().has_complete == true ? 1 : 0;
+    	self.form_data.current().status = self.form_data.current().status == true ? 1 : 0;
     };
 
     self.saved = function () {
@@ -50,19 +50,19 @@ function ToolBar() {
     			text += '<br/>+ Địa chỉ: <strong>'+data.contact_address+'</strong>';
     		return text;
     	},
-        has_complete: function(data){
-        	return data.has_complete === 0 ? '<span class="label label-default">Đang chờ</span>' : '<span class="label label-success">Đã trả lời</span>';
+        status: function(data){
+        	return data.status == 0 ? '<span class="label label-default">Đang chờ</span>' : '<span class="label label-success">Đã trả lời</span>';
         }
     };
 }
 var toolbar = new ToolBar();
 </script>
 <grid params="cols: {
-        contact_name: 'Học viên đăng ký',
-        content: 'Nội dung',
-        has_complete: 'Trạng thái',
+        contact_name: 'Thông tin liên hệ',
+        message: 'Nội dung',
+        status: 'Trạng thái',
     },
-    sorts: ['contact_name', 'has_complete'],
+    sorts: ['contact_name', 'status'],
     url: '{{ uri() }}',
     token: '{{ csrf_token() }}',
     buttons: ['add', 'edit', 'delete'],

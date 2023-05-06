@@ -8,7 +8,7 @@
             <div class="vc_column-inner">
                 <div class="wpb_wrapper">
                     <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-8">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element ">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                        <div class="wpb_column vc_column_container vc_col-sm-4 hidden">
                             <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element ">

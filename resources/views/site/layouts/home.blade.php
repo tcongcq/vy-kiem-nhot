@@ -41,19 +41,19 @@
     @yield('main')
 
     <script type="text/javascript">
-        function showPosition(position) {
-            console.log("Latitude: " + position.coords.latitude +
-            " Longitude: " + position.coords.longitude);
-            alert("Latitude: " + position.coords.latitude +
-            " Longitude: " + position.coords.longitude)
-        }
-        const up = function(){
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                console.log("Geolocation is not supported by this browser.");
-            }
-        };
+        // function showPosition(position) {
+        //     console.log("Latitude: " + position.coords.latitude +
+        //     " Longitude: " + position.coords.longitude);
+        //     alert("Latitude: " + position.coords.latitude +
+        //     " Longitude: " + position.coords.longitude)
+        // }
+        // const up = function(){
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         console.log("Geolocation is not supported by this browser.");
+        //     }
+        // };
     </script>
 
     <!--Scroll to top-->
@@ -109,6 +109,8 @@
     
     <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="/assets/js/masonry.pkgd.min.js"></script>
+
+    @yield('footer-script')
 
 </body>
 

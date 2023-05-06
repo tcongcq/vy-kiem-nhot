@@ -1,7 +1,17 @@
 <section class="text-center" style="padding-top: 20px;">
     <div style="font-style: normal;line-height: 30px;letter-spacing: 2px;" class="cleversoft-widget-tinymce textwidget global-element">
-        <h2 style="text-transform: none; color:#EF2F25;font-weight:bold;">Premium lubricating oil distributors</h2>
-        <p style="text-align: center !important;">ILD and Sinopec have partnered to deliver industry leading grease and lubricant solutions developed for tough Australian conditions.</p>
+        <h2 style="text-transform: none; color:#EF2F25;font-weight:bold;">
+            CÔNG TY TNHH LÊ LỢI
+        </h2>
+        <h4 style="text-transform: none; color:#EF2F25;font-weight:bold;">
+            ĐỐI TÁC CHỦ LỰC CỦA SINOPEC TẠI VIỆT NAM
+        </h4>
+        
+        <br />
+
+        <p style="text-align: center !important;">
+            Công Ty TNHH Lê Lợi tự hào là nhà phân phối chủ lực tất cả dòng sản phẩm dầu nhờn Sinopec tại thị trường Việt Nam. Sinopec đã tạo ra danh tiếng quốc tế về chất lượng sản phẩm đáng tin cậy và hiệu quả đáp ứng mọi lĩnh vực: hàng hải, công nghiệp, vận tải...
+        </p>
     </div>
 </section>
 

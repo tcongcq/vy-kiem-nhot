@@ -16,7 +16,7 @@
                         <div class="wpb_wrapper">
                             <h2 style="text-align: center;">
                                 <span style="color: #000000;">
-                                    <strong>OUR PRODUCT AREAS</strong>
+                                    <strong>SẢN PHẨM PHỔ BIẾN</strong>
                                 </span>
                             </h2>
                         </div>

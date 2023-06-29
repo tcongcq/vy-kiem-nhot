@@ -47,6 +47,6 @@
         </div>
     </div>
 </div>
-<div style="user-select: none;">
+<div style="user-select: none; display: none;">
     <img src="/theme/img/homepage/banner-1.jpg">
 </div>
